@@ -1,1 +1,1 @@
-# dancetrack.github.io
+# rebuttal repo for Open-GMOT (AAAI24)
