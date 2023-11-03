@@ -43,6 +43,14 @@ body {
 }
 
 /* Style for the main content */
+
+/* Apply digital code style font */
+.code-font {
+    font-family: "Courier New", monospace;
+    text-align: center;
+    color: rgb(0, 0, 0); /* Green color, you can adjust the color as desired */
+}
+
 .content {
     margin-top: 60px; /* Adjust for the fixed navbar height */
 }
@@ -352,6 +360,22 @@ ul.authors.links li {
     background-color: green;
 }
 
+/* For displaying image examples */
+.image-container {
+    display: flex;
+}
+
+/* Create three equal columns that sits next to each other */
+.image-content {
+    margin: 10px;
+    text-align: center;
+}
+
+p {
+    margin: 10px 0;
+    word-wrap: break-word; /* Allow long captions to break into multiple lines */
+}
+
 /* For BibTeX */
 pre {
     margin-top: 0px;
@@ -454,9 +478,9 @@ h3.results {
     position: relative;
     padding-bottom: 56.25%;
     /* 16:9 */
-    padding-top: 25px;
+    padding-top: 15px;
     height: 0;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
   
 .videoWrapper iframe {
