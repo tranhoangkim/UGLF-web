@@ -60,7 +60,7 @@
                     </a>
                 </li> 
                 <li>
-                    <a href="" target="_blank">
+                    <a href="https://www.youtube.com/playlist?list=PLSf1X3oNUW2se2U111HJ3wkSnZ7dcVGC_" target="_blank">
                         <button class="btn"><i class="fab fa-youtube fa-w-18"></i> Demo</button>
                     </a>
                 </li>
@@ -287,13 +287,13 @@
             Dataset
          </h2>
          <p>
-            We offer a dataset that surpasses existing official tracking datasets, such as GMOT-40, AnimalTrack and DanceTrack,
+            We offer a dataset that surpasses existing official tracking datasets, such as <b>GMOT-40</b>, <b>AnimalTrack</b> and <b>DanceTrack</b>,
             in terms of advancement. Our dataset includes videos with a wider range of generic objects, each accompanied
             by its respective textual descriptions. Our dataset with textual description annotations are formatted in COCO format.
             Each generic object is labeled as follows:
             <ul>
                 <li><b>“Video”</b>: video name. For example "airplane-0" </li>
-                <li><b>”Object"</b>: particular generic objects type. For example, helicopter</li>
+                <li><b>”Class Name"</b>: particular generic objects type. For example, helicopter</li>
                 <li><b>“Synonyms”</b>: synonym of object. For example, aircraft, air-plane</li>
                 <li><b>“Caption”</b>: The caption is followed the format:
                     <p style="font-size: 20px; text-align: center;">
@@ -303,6 +303,48 @@
                     </p>
                 </li>
             </ul>
+            <div class="image-container">
+                <div class="image-content">
+                    <img src="media/dataset_gmot40.jpg" alt="Image 1" style="width:100%">
+                    <ul style="text-align: left;">
+                        <li><b>“Video”</b>: car-3 </li>
+                        <li><b>”Class Name"</b>: car</li>
+                        <li><b>“Synonyms”</b>: ["vehicle", "automobile", "motorcar", "motor vehicle", "machine"]</li>
+                        <li><b>“Caption”</b>:
+                                <span style="font-family: 'Courier New', monospace; font-weight: bold; color: green;">car</span>
+                                &nbsp;include&nbsp;  <span style="font-family: 'Courier New', monospace; font-weight: bold; color: orange;">white headlight</span>
+                                &nbsp;exclude&nbsp;  <span style="font-family: 'Courier New', monospace; font-weight: bold; color: crimson;">red tailight</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="image-content">
+                    <img src="media/dataset_animaltrack.jpg" alt="Image 2" style="width:100%">
+                    <ul style="text-align: left;">
+                        <li><b>“Video”</b>: horse_7 </li>
+                        <li><b>”Class Name"</b>: car</li>
+                        <li><b>“Synonyms”</b>: [“equine”, “steed”, “four-legged animal”]</li>
+                        <li><b>“Caption”</b>:
+                                <span style="font-family: 'Courier New', monospace; font-weight: bold; color: green;">horse</span>
+                                &nbsp;include&nbsp;  <span style="font-family: 'Courier New', monospace; font-weight: bold; color: orange;">in the river</span>
+                                &nbsp;exclude&nbsp;  <span style="font-family: 'Courier New', monospace; font-weight: bold; color: crimson;">on the ground</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="image-content">
+                    <img src="media/dataset_dancetrack.jpg" alt="Image 2" style="width:100%">
+                    <ul style="text-align: left;">
+                        <li><b>“Video”</b>: dancetrack0032 </li>
+                        <li><b>”Class Name"</b>: person</li>
+                        <li><b>“Synonyms”</b>: [“human”, “athlete”, “dancer”, “tin soldier”, “performer”]</li>
+                        <li><b>“Caption”</b>:
+                                <span style="font-family: 'Courier New', monospace; font-weight: bold; color: green;">person</span>
+                                &nbsp;include&nbsp;  <span style="font-family: 'Courier New', monospace; font-weight: bold; color: orange;">on stage, in guard uniform</span>
+                                &nbsp;exclude&nbsp;  <span style="font-family: 'Courier New', monospace; font-weight: bold; color: crimson;">{None}</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Add more images with captions as needed -->
+            </div>
          </p>
 
         <!-- <h2 id="rebuttal-aaai">
@@ -329,11 +371,12 @@
         </div>
         <p> </p> -->
         
+        </div>
     </div>
 
     <footer>
         <div class="footer-content">
-            <p>&copy; 2023 Website for AAAI 2024</p>
+            <p style="text-align: center;">&copy; 2023 Website for AAAI 2024</p>
         </div>
     </footer>
 </body>
