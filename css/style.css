@@ -23,7 +23,7 @@ body {
     padding: 0px;
 }
 
-/* Style for the navigation bar */
+/* Basic CSS for the navigation bar */
 .navbar {
     position: fixed;
     top: 0;
@@ -31,15 +31,43 @@ body {
     width: 100%;
     background-color: #333;
     color: #fff;
-    padding: 10px;
     z-index: 100; /* Ensure the navbar appears above other content */
 }
 
-/* Style for the navigation links */
+/* Style for the headline on the left */
+.navbar h3 {
+    color: white;  /* Text color for the headline */
+    margin: 0;
+    padding: 10px 0px 10px 200px;
+    float: left;  /* Float left to place it on the left side */
+}
+
+/* Style for the page links on the right */
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 15px;
+    float: right;  /* Float right to place them on the right side */
+}
+
+.navbar li {
+    display: inline;
+    margin: 0 10px;  /* Add spacing between links */
+}
+
 .navbar a {
-    color: #fff;
+    color: white;  /* Text color for the links */
     text-decoration: none;
-    margin: 0 20px;
+}
+
+.navbar a.active {
+    color: white;  /* Text color for the active link */
+    text-decoration: none;
+}
+
+/* Hover effect for the links */
+.navbar a:hover {
+    text-decoration: underline;
 }
 
 /* Style for the main content */
@@ -169,7 +197,7 @@ body {
 }
 
 .n-title {
-    padding: 4rem 0 1.5rem;
+    padding: 6rem 0 1.5rem;
 }
 
 .l-page {
@@ -225,7 +253,7 @@ a:visited {
     text-align: justify;
     color: rgb(33, 40, 53);
     border-top: 1px solid rgba(0, 0, 0, 0.1);
-    padding-top: 2rem;
+    padding-top: 3rem;
 }
 
 .n-article h2 {
@@ -535,8 +563,9 @@ footer {
 /* Style for the footer content */
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    text-align: center;
     flex-wrap: wrap;
 }
 

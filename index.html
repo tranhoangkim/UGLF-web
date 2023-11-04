@@ -20,11 +20,35 @@
 </head>
 
 <body>
-    <!-- <div class="navbar">
-        <a href="#abstract">Abstract</a>
-        <a href="#method">Method</a>
-        <a href="#rebuttal-aaai">Rebuttal</a>
-    </div> -->
+    <div class="navbar">
+        <h3>Open-GMOT demo website</h3>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="method.html">Methodology</a></li>
+            <li><a href="result.html">Result</a></li>
+            <li><a href="code.html">Code</a></li>
+            <li><a href="dataset.html">Dataset</a></li>
+        </ul>
+        <script>
+            // Get the current URL
+            var currentURL = window.location.href;
+        
+            // Select all navigation links
+            var navLinks = document.querySelectorAll('.navbar a');
+        
+            // Loop through the links to find the active one
+            for (var i = 0; i < navLinks.length; i++) {
+                var linkURL = navLinks[i].href;
+        
+                // Check if the current URL contains the link's URL
+                if (currentURL.indexOf(linkURL) !== -1) {
+                    // Add the "active" class to the link
+                    navLinks[i].classList.add('active');
+                }
+            }
+        </script>
+    </div>
+    
 
     <div class="n-title">
         <h1>
@@ -46,17 +70,17 @@
             <ul class="authors links">
                 <li>
                     <a href="" target="_blank">
-                        <button class="btn"><i class="fa fa-file-pdf"></i> Paper</button>
+                        <button disabled class="btn"><i class="fa fa-file-pdf"></i> Paper</button>
                     </a>
                 </li>
                 <li>
                     <a href="" target="_blank">
-                        <button class="btn"><i class="fab fa-github"></i> Code</button>
+                        <button disabled class="btn"><i class="fab fa-github"></i> Code</button>
                     </a>
                 </li>
                 <li>
                     <a href="" target="_blank">
-                        <button class="btn"><i class="fab fa-github"></i> Dataset</button>
+                        <button disabled class="btn"><i class="fab fa-github"></i> Dataset</button>
                     </a>
                 </li> 
                 <li>
@@ -90,7 +114,7 @@
             <iframe width="560" height="315" border-style=none src="https://www.youtube.com/embed/PPI6ewcAEuA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         
-        <p style="font-size: 22px; text-align: center;">Tracking prompt: 
+        <!-- <p style="font-size: 22px; text-align: center;">Tracking prompt: 
             <span style="font-weight: bold; color: green;">"airplane</span>
             <span style="font-family: 'Courier New', monospace; font-weight: bold;">&nbsp;&lt;include&gt;</span>
             <span style="font-weight: bold; color: orange;">&nbsp;metal shell</span>
@@ -110,7 +134,7 @@
         </p>
         <div class="videoWrapper shadow">
             <iframe width="560" height="315" border-style=none src="https://www.youtube.com/embed/Eh5HJUSL9NE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+        </div> -->
             
             <div class="videocaption" style="margin-bottom: 1rem">
                 <div>
@@ -128,224 +152,7 @@
         <div>
             <img class="figure" src="media/Fig1.png" width="100%" alt="Pipeline Overview">
         </div>
-        
-        <!------------------------------------------------------Section Boundary-------------------------------------------------->
-        <h2 id="method">
-            Methodology
-        </h2>
-        <p style="font-size: 22px;">
-            <b>Open-CSOD</b>: To address these limitations of pre-trained VL models, our Open-CSOD comprises two modules as follows:
-        </p>
-        <p>
-            <b><u><span style="font-size: 20px;">Module 1:</span></u></b> Include/Exclude Whole-Part (IE-WP) Strategy: To precisely depict the characteristics of a generic attribute
-        within a category, while excluding others that may belong to the same category but possess distinct traits, we introduce
-        a novel strategy. This strategy involves structuring the prompt using the format of IE-WP, as shown:
-        </p>
-        <p style="font-size: 20px; text-align: center;">
-            <span style="font-family: 'Courier New', monospace; font-weight: bold; color: green;">&lt;attribute.object&gt;</span>
-            &nbsp;include&nbsp;  <span style="font-family: 'Courier New', monospace; font-weight: bold; color: orange;">&lt;attribute.part&gt;</span>
-            &nbsp;exclude&nbsp;  <span style="font-family: 'Courier New', monospace; font-weight: bold; color: crimson;">&lt;attribute.part&gt;</span>
-        </p>
-        <div class="image-container">
-            <div class="image-content">
-                <img src="media/opencsod1.png" alt="Image 1" style="width:100%">
-                <p style="font-size: 20px; text-align: center;">Tracking prompt: 
-                    <span style="font-weight: bold; color: green;">"ball</span>
-                    <span style="font-family: 'Courier New', monospace; font-weight: bold;">&nbsp;&lt;include&gt;</span>
-                    <span style="font-weight: bold; color: orange;">&nbsp;red ball</span>
-                    <span style="font-family: 'Courier New', monospace; font-weight: bold;">&nbsp;&lt;exclude&gt;</span>
-                    <span style="font-weight: bold;  color: crimson;">&nbsp;yellow, green, black, white ball"</span>
-                </p>
-            </div>
-            <div class="image-content">
-                <img src="media/opencsod2.png" alt="Image 2" style="width:100%">
-                <p style="font-size: 20px; text-align: center;">Tracking prompt: 
-                    <span style="font-weight: bold; color: green;">"duck</span>
-                    <span style="font-family: 'Courier New', monospace; font-weight: bold;">&nbsp;&lt;include&gt;</span>
-                    <span style="font-weight: bold; color: orange;">&nbsp;small body</span>
-                    <span style="font-family: 'Courier New', monospace; font-weight: bold;">&nbsp;&lt;exclude&gt;</span>
-                    <span style="font-weight: bold;  color: crimson;">&nbsp;big duck, white tail feather"</span>
-                </p>
-            </div>
-            <div class="image-content">
-                <img src="media/opencsod3.png" alt="Image 2" style="width:100%">
-                <p style="font-size: 20px; text-align: center;">Tracking prompt: 
-                    <span style="font-weight: bold; color: green;">"person</span>
-                    <span style="font-family: 'Courier New', monospace; font-weight: bold;">&nbsp;&lt;include&gt;</span>
-                    <span style="font-weight: bold; color: orange;">&nbsp;on stage, black suit</span>
-                </p>
-            </div>
-            <!-- Add more images with captions as needed -->
-        </div>
 
-        <p>
-            <b><u><span style="font-size: 20px;">Module 2:</span></u></b> Long-Short Memory (LSM) Mechanism: To mitigate False Positive
-            (FP) arisingfrom challenges like pose, illumination, and occlusion, we propose a LSM mechanism.
-        </p>
-        <div>
-            <img class="figure" src="media/open-gmot.jpg" width="100%" alt="Pipeline Overview">
-        </div>
-        <p style="font-size: 22px;">
-            <b>MAC-SORT</b>: We introduce MAC-SORT, as an enhancement of OC-SORT, which itself extends the SORT
-        </p>
-        <p>
-            The standard similarity between track and box embeddings is defined using cosine distance, denoted as <span style="font-family: 'Times New Roman', serif; font-size: 20px; font-weight: bold;">𝐂<sub>𝑎</sub> ∈ ℜ<sup>𝑀×𝑁</sup></span>. In a typical tracking approach that combines visual appearance and motion cues, the cost matrix <span style="font-family: 'Times New Roman', serif; font-size: 20px; font-weight: bold;">𝐶</span> is computed as <span style="font-family: 'Times New Roman', serif; font-size: 20px; font-weight: bold;">𝐶(𝒯, 𝒟) = 𝑀<sub>c</sub>(𝒯, 𝒟) + 𝛼 𝐶<sub>𝑎</sub>(𝒯, 𝒟)</span>, where <span style="font-family: 'Times New Roman', serif; font-size: 20px; font-weight: bold;">𝑀<sub>c</sub></span> represents the motion cost, measured by the IoU cost matrix. Leveraging OC-SORT, which computes a virtual trajectory over the occlusion period to rectify the error accumulation of filter parameters during occlusions, the motion cost is defined as <span style="font-family: 'Times New Roman', serif; font-size: 20px; font-weight: bold;">𝑀<sub>c</sub>(𝒯, 𝒟) = IoU(𝒯, 𝒟) + 𝜆 𝐶<sub>𝑣</sub>(𝜏, 𝒯)</span>. Thus, the resulting cost matrix integrating both visual appearance and motion is as follows:
-        </p>
-          
-        <figure>
-          <p style="font-family: 'Times New Roman', serif; font-size: 20px; font-weight: bold; text-align: center;">
-            𝐶(𝒯, 𝒟) = IoU(𝒯, 𝒟) + 𝜆 C<sub>𝑣</sub>(𝜏, 𝒯) + 𝛼 C<sub>𝑎</sub>(𝒯, 𝒟)
-          </p>
-          <figcaption style="text-align: center;">(Equation 1)</figcaption>
-        </figure>
-        <p>
-          As the weight on appearance decreases, we propose redistributing the remaining weight to motion. Thus, the adaptive motion weight 
-          <span style="font-family: 'Times New Roman', serif; font-size: 20px; font-weight: bold;">𝑊<sub>amw</sub></span> is defined as:
-        </p>
-        
-        <figure>
-          <p style="font-family: 'Times New Roman', serif; font-size: 20px; font-weight: bold; text-align: center;">
-            𝑊<sub>amw</sub> = 1 + [1 - 𝑊<sub>aaw</sub>] = 2 - [1 - 𝜇<sub>det</sub> / (1 - cos(45°))]
-          </p>
-          <figcaption style="text-align: center;">(Equation 2)</figcaption>
-        </figure>
-          
-        <!------------------------------------------------------Section Boundary-------------------------------------------------->
-        <h2 id="results">
-            Results
-        </h2>
-        
-        <h3 class="results" id="qunatitative">
-            Quantitative Results
-
-        </h3>
-        <div>
-            <img class="figure" src="media/tableresults.jpg" width="100%" alt="Table of Result">
-        </div>
-        <p>
-            Our experimental tables. The results show strong evidences that our method has a great performance for GMOT tasks.
-        </p>
-        
-        <h3 class="results" id="qualitative">
-            Qualitative Result
-        </h3>
-        <div class="n-page video">
-            <!--             <video class="centered shadow" width="100%" autoplay muted loop playsinline>
-                            <!-- t=0.001 is a hack to make iPhone show video thumbnail -->
-            <!--                 <source src="https://www.youtube.com/embed/IvxeJRg4rYg" type="video/mp4" /> -->
-            <!--             </video>  -->
-            <!--         <h2>
-                        Narrated Results Video
-                    </h2> --> 
-                    <p style="font-size: 20px; text-align: center;">Tracking prompt: 
-                        <span style="font-weight: bold; color: green;">"car</span>
-                        <span style="font-family: 'Courier New', monospace; font-weight: bold;">&nbsp;&lt;include&gt;</span>
-                        <span style="font-weight: bold; color: orange;">&nbsp;red color</span>
-                        <span style="font-family: 'Courier New', monospace; font-weight: bold;">&nbsp;&lt;exclude&gt;</span>
-                        <span style="font-weight: bold;  color: crimson;">&nbsp;yellow, blue, black, white color"</span>
-                    </p>
-                    <div class="videoWrapper shadow">
-                        <iframe width="560" height="315" border-style=none src="https://www.youtube.com/embed/MX8g-8NXx7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    
-                    <p style="font-size: 20px; text-align: center;">Tracking prompt: 
-                        <span style="font-weight: bold; color: green;">"car</span>
-                        <span style="font-family: 'Courier New', monospace; font-weight: bold;">&nbsp;&lt;include&gt;</span>
-                        <span style="font-weight: bold; color: orange;">&nbsp;yellow color</span>
-                        <span style="font-family: 'Courier New', monospace; font-weight: bold;">&nbsp;&lt;exclude&gt;</span>
-                        <span style="font-weight: bold; color: crimson;">&nbsp;red, blue, black, white color"</span>
-                    </p>
-                    <div class="videoWrapper shadow">
-                        <iframe width="560" height="315" border-style=none src="https://www.youtube.com/embed/H7nVN4VRhbk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-            
-                    <p style="font-size: 20px; text-align: center;">Tracking prompt: 
-                        <span style="font-weight: bold; color: green;">"car</span>
-                        <span style="font-family: 'Courier New', monospace; font-weight: bold;">&nbsp;&lt;include&gt;</span>
-                        <span style="font-weight: bold; color: orange;">&nbsp;dark blue car</span>
-                        <span style="font-family: 'Courier New', monospace; font-weight: bold;">&nbsp;&lt;exclude&gt;</span>
-                        <span style="font-weight: bold; color: crimson;">&nbsp;red, yellow, black, white"</span>
-                    </p>
-                    <div class="videoWrapper shadow">
-                        <iframe width="560" height="315" border-style=none src="https://www.youtube.com/embed/E7mSlziENQ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-        <p>
-            We conduct extensive experiments to empirically prove the performance of our proposed Open-GMOT
-            including both detection with Open-CSOD and association with MAC-SORT in the GMOT problem.
-            Our strategy can help bridging the gap between human's intention and computer understanding to provide
-            flexibility in tracking objects with distinctive characteristics follow input texts.
-        </p>
-
-        <h2 class="code" id="code">
-           Code
-        </h2>
-        <h3>
-        Coming soon
-        </h3>
-
-        <h2 class="dataset" id="dataset">
-            Dataset
-         </h2>
-         <p>
-            We offer a dataset that surpasses existing official tracking datasets, such as <b>GMOT-40</b>, <b>AnimalTrack</b> and <b>DanceTrack</b>,
-            in terms of advancement. Our dataset includes videos with a wider range of generic objects, each accompanied
-            by its respective textual descriptions. Our dataset with textual description annotations are formatted in COCO format.
-            Each generic object is labeled as follows:
-            <ul>
-                <li><b>“Video”</b>: video name. For example "airplane-0" </li>
-                <li><b>”Class Name"</b>: particular generic objects type. For example, helicopter</li>
-                <li><b>“Synonyms”</b>: synonym of object. For example, aircraft, air-plane</li>
-                <li><b>“Caption”</b>: The caption is followed the format:
-                    <p style="font-size: 20px; text-align: center;">
-                        <span style="font-family: 'Courier New', monospace; font-weight: bold; color: green;">&lt;attribute.object&gt;</span>
-                        &nbsp;include&nbsp;  <span style="font-family: 'Courier New', monospace; font-weight: bold; color: orange;">&lt;attribute.part&gt;</span>
-                        &nbsp;exclude&nbsp;  <span style="font-family: 'Courier New', monospace; font-weight: bold; color: crimson;">&lt;attribute.part&gt;</span>
-                    </p>
-                </li>
-            </ul>
-            <div class="image-container">
-                <div class="image-content">
-                    <img src="media/dataset_gmot40.jpg" alt="Image 1" style="width:100%">
-                    <ul style="text-align: left;">
-                        <li><b>“Video”</b>: car-3 </li>
-                        <li><b>”Class Name"</b>: car</li>
-                        <li><b>“Synonyms”</b>: ["vehicle", "automobile", "motorcar", "motor vehicle", "machine"]</li>
-                        <li><b>“Caption”</b>:
-                                <span style="font-family: 'Courier New', monospace; font-weight: bold; color: green;">car</span>
-                                &nbsp;include&nbsp;  <span style="font-family: 'Courier New', monospace; font-weight: bold; color: orange;">white headlight</span>
-                                &nbsp;exclude&nbsp;  <span style="font-family: 'Courier New', monospace; font-weight: bold; color: crimson;">red tailight</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="image-content">
-                    <img src="media/dataset_animaltrack.jpg" alt="Image 2" style="width:100%">
-                    <ul style="text-align: left;">
-                        <li><b>“Video”</b>: horse_7 </li>
-                        <li><b>”Class Name"</b>: car</li>
-                        <li><b>“Synonyms”</b>: [“equine”, “steed”, “four-legged animal”]</li>
-                        <li><b>“Caption”</b>:
-                                <span style="font-family: 'Courier New', monospace; font-weight: bold; color: green;">horse</span>
-                                &nbsp;include&nbsp;  <span style="font-family: 'Courier New', monospace; font-weight: bold; color: orange;">in the river</span>
-                                &nbsp;exclude&nbsp;  <span style="font-family: 'Courier New', monospace; font-weight: bold; color: crimson;">on the ground</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="image-content">
-                    <img src="media/dataset_dancetrack.jpg" alt="Image 2" style="width:100%">
-                    <ul style="text-align: left;">
-                        <li><b>“Video”</b>: dancetrack0032 </li>
-                        <li><b>”Class Name"</b>: person</li>
-                        <li><b>“Synonyms”</b>: [“human”, “athlete”, “dancer”, “tin soldier”, “performer”]</li>
-                        <li><b>“Caption”</b>:
-                                <span style="font-family: 'Courier New', monospace; font-weight: bold; color: green;">person</span>
-                                &nbsp;include&nbsp;  <span style="font-family: 'Courier New', monospace; font-weight: bold; color: orange;">on stage, in guard uniform</span>
-                                &nbsp;exclude&nbsp;  <span style="font-family: 'Courier New', monospace; font-weight: bold; color: crimson;">{None}</span>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Add more images with captions as needed -->
-            </div>
-         </p>
 
         <!-- <h2 id="rebuttal-aaai">
             Rebuttal Section
@@ -376,7 +183,7 @@
 
     <footer>
         <div class="footer-content">
-            <p style="text-align: center;">&copy; 2023 Website for AAAI 2024</p>
+            <p style="text-align: center;">&copy; Website for AAAI2024's submission</p>
         </div>
     </footer>
 </body>
