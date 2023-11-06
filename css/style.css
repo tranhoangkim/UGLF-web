@@ -400,6 +400,15 @@ ul.authors.links li {
     text-align: center !important;
 }
 
+.pre-container {
+    overflow: auto; /* Enable scrolling if the content overflows */
+    justify-content: left;
+    white-space: pre-line;
+    /* white-space: pre-wrap; Allow long lines to wrap within the container */
+    max-width: 100%; /* Prevent the <pre> from exceeding the parent's width */
+    max-height: 100%; /* Prevent the <pre> from exceeding the parent's height */
+  }
+
 p {
     margin: 10px 0;
     word-wrap: break-word; /* Allow long captions to break into multiple lines */
@@ -414,8 +423,9 @@ pre {
     padding-top: 3px;
     padding-bottom: 3px;
     border-radius: 3px;
+    min-width: 0;
     background-color: rgb(235, 235, 235);
-    overflow-x: auto;
+    overflow: auto;
 }
 
 /* video caption */
