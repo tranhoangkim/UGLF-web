@@ -17,6 +17,29 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
     <script defer src="js/fontawesome.all.min.js"></script>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        caption {
+            margin-bottom: 0.5em;
+            font-weight: bold;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .asparagus30 { background-color: #88B04B; } /* Replace with actual color */
+        .almond30 { background-color: #EFDECD; } /* Replace with actual color */
+        .babyblue20 { background-color: #89CFF0; } /* Replace with actual color */
+        .aureolin20 { background-color: #FDEE00; } /* Replace with actual color */
+
+    </style>
 </head>
 
 <body>
@@ -52,6 +75,176 @@
         <h2 class="dataset" id="dataset">
            Dataset
         </h2>
+        <table>
+            <caption>Comparison of <strong>existing datasets</strong> of SOT, MOT, GSOT, GMOT. "#" represents the quantity of the respective items. Cat., Vid., NLP denote Categories, Videos, and Textual Language Descriptions.</caption>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th><strong>Datasets</strong></th>
+                    <th><strong>NLP</strong></th>
+                    <th>#<strong>Cat.</strong></th>
+                    <th>#<strong>Vid.</strong></th>
+                    <th>#<strong>Frames</strong></th>
+                    <th>#<strong>Tracks</strong></th>
+                    <th>#<strong>Boxs</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- SOT Section -->
+                <tr class="asparagus30">
+                    <td rowspan="5">SOT</td>
+                    <td>OTB2013~[1]</td>
+                    <td>&times;</td>
+                    <td>10</td>
+                    <td>51</td>
+                    <td>29K</td>
+                    <td>51</td>
+                    <td>29K</td>
+                </tr>
+                <tr class="asparagus30">
+                    <td>VOT2017~[2]</td>
+                    <td>&times;</td>
+                    <td>24</td>
+                    <td>60</td>
+                    <td>21K</td>
+                    <td>60</td>
+                    <td>21K</td>
+                </tr>
+                <tr class="asparagus30">
+                    <td>TrackingNet~[3]</td>
+                    <td>&times;</td>
+                    <td>21</td>
+                    <td>31K</td>
+                    <td>14M</td>
+                    <td>31K</td>
+                    <td>14M</td>
+                </tr>
+                <tr class="asparagus50">
+                    <td>LaSOT~[4]</td>
+                    <td>&#10003;</td>
+                    <td>70</td>
+                    <td>1.4K</td>
+                    <td>3.52M</td>
+                    <td>1.4K</td>
+                    <td>3.52M</td>
+                </tr>
+                <tr class="asparagus50">
+                    <td>TNL2K~[5]</td>
+                    <td>&#10003;</td>
+                    <td>-</td>
+                    <td>2K</td>
+                    <td>1.24M</td>
+                    <td>2K</td>
+                    <td>1.24M</td>
+                </tr>
+                <!-- GSOT Section -->
+                <tr class="almond30">
+                    <td rowspan="2">GSOT</td>
+                    <td>GOT-10~[6]</td>
+                    <td>&times;</td>
+                    <td>563</td>
+                    <td>10K</td>
+                    <td>1.5M</td>
+                    <td>10K</td>
+                    <td>1.5M</td>
+                </tr>
+                <tr class="almond30">
+                    <td>Fish~[7]</td>
+                    <td>&times;</td>
+                    <td>1</td>
+                    <td>1.6K</td>
+                    <td>527.2K</td>
+                    <td>8.25K</td>
+                    <td>516K</td>
+                </tr>
+                <!-- MOT Section -->
+                <tr class="babyblue20">
+                    <td rowspan="6">MOT</td>
+                    <td>MOT17~[8]</td>
+                    <td>&times;</td>
+                    <td>1</td>
+                    <td>14</td>
+                    <td>11.2K</td>
+                    <td>1.3K</td>
+                    <td>0.3M</td>
+                </tr>
+                <tr class="babyblue20">
+                    <td>MOT20~[9]</td>
+                    <td>&times;</td>
+                    <td>1</td>
+                    <td>8</td>
+                    <td>13.41K</td>
+                    <td>3.45K</td>
+                    <td>1.65M</td>
+                </tr>
+                <tr class="babyblue20">
+                    <td>Omni-MOT~[10]</td>
+                    <td>&times;</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>14M+</td>
+                    <td>250K</td>
+                    <td>110M</td>
+                </tr>
+                <tr class="babyblue20">
+                    <td>DanceTrack~[11]</td>
+                    <td>&times;</td>
+                    <td>1</td>
+                    <td>100</td>
+                    <td>105K</td>
+                    <td>990</td>
+                    <td>-</td>
+                </tr>
+                <tr class="babyblue20">
+                    <td>TAO~[12]</td>
+                    <td>&times;</td>
+                    <td>833</td>
+                    <td>2.9K</td>
+                    <td>2.6M</td>
+                    <td>17.2K</td>
+                    <td>333K</td>
+                </tr>
+                <tr class="babyblue20">
+                    <td>SportMOT~[13]</td>
+                    <td>&times;</td>
+                    <td>1</td>
+                    <td>240</td>
+                    <td>150K</td>
+                    <td>3.4K</td>
+                    <td>1.62M</td>
+                </tr>
+                <!-- GMOT Section -->
+                <tr class="aureolin20">
+                    <td rowspan="3">GMOT</td>
+                    <td>AnimalTrack~[14]</td>
+                    <td>&times;</td>
+                    <td>10</td>
+                    <td>58</td>
+                    <td>24.7K</td>
+                    <td>1.92K</td>
+                    <td>429K</td>
+                </tr>
+                <tr class="aureolin40">
+                    <td>Refer-GMOT40 (Ours)</td>
+                    <td>&#10003;</td>
+                    <td>10</td>
+                    <td>40</td>
+                    <td>9K</td>
+                    <td>2.02K</td>
+                    <td>256K</td>
+                </tr>
+                <tr class="aureolin40">
+                    <td>Refer-Animal (Ours)</td>
+                    <td>&#10003;</td>
+                    <td>10</td>
+                    <td>58</td>
+                    <td>24.7K</td>
+                    <td>1.92K</td>
+                    <td>429K</td>
+                </tr>
+            </tbody>
+        </table>
+        
         <p>
            We offer a dataset that surpasses existing official tracking datasets, such as <b>GMOT-40</b>, <b>AnimalTrack</b> and <b>DanceTrack</b>,
            in terms of advancement. Our dataset includes videos with a wider range of generic objects, each accompanied

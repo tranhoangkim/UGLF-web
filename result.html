@@ -17,11 +17,195 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
     <script defer src="js/fontawesome.all.min.js"></script>
+
+    <style>
+        /* * {
+        	font-family: 'Poppins', sans-serif;
+        	margin: 0;
+        	padding: 0;
+        	box-sizing: border-box;
+        	text-transform: capitalize;
+        } */
+        body {
+        	background-color: #ffffff;
+        	padding: 20px;
+        }
+        .container {
+        	max-width: 1200px;
+        	margin: auto;
+        	/* display: flex; */
+        	flex-wrap: wrap;
+        	align-items: flex-start;
+        	gap: 20px;
+        }
+        .main-video-container {
+        	flex: 50%;
+            max-width: 1200px;
+            max-height: 1200px;
+        	background-color: #fff;
+        	padding: 15px;
+        }
+        .main-video {
+        	margin-bottom: 7px;
+        	width: 100%;
+        }
+        .main-vid-title {
+        	font-size: 20px;
+        	color: #444;
+        }
+        .video-list-container {
+        	display: flex;
+            max-width:fit-content;
+            overflow-x: scroll;
+        	background-color: #fff;
+        	padding: 15px 15px 15px 15px;
+        }
+
+        .list {
+        	display: flex;
+            flex-wrap: wrap;
+        	align-items:start;
+        	gap: 15px;
+        	padding: 10px;
+        	border: 1px solid #eee;
+        	cursor: pointer;
+        	border-radius: 5px;
+        	margin-bottom: 10px;
+        }
+        .list:last-child {
+        	margin-bottom: 0;
+        }
+        .list.active {
+            display: flex;
+            flex-wrap: wrap;
+        	align-items: center;
+        	gap: 15px;
+        	padding: 10px;
+        	border: 1px solid #eee;
+        	cursor: pointer;
+        	border-radius: 5px;
+        	margin-bottom: 10px;
+        	background-color: #ffcc00;
+        }
+        .container .video-list-container .list.active .list-title {
+        	color: #fff;
+        }
+        .list-video {
+        	width: 200px;
+            height: 120px;
+        	border-radius: 5px;
+        }
+        .list-title {
+        	font-size: 15px;
+        	color: #000000;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        @media (max-width:1200px) {
+        	.container {
+        		margin: 0;
+        	}
+        	.video-list-container{
+        		border: none !important;
+        		padding: 15px !important;
+        	}
+        }
+        @media (max-width:450px) {
+        	.video-list-container{
+                display: flex;
+        		border: none !important;
+        		padding: 15px !important;
+        	}
+        	.main-vid-title {
+        		font-size: 15px;
+        		text-align: center;
+        	}
+        	.list {
+        		flex-flow: column;
+        		gap: 10px;
+        	}
+        	.list-video {
+        		width: 100%;
+        	}
+        	.list-title {
+        		font-size: 15px;
+        		text-align: center;
+        	}
+        }
+        .gmot-tracking-comparison {
+            border-collapse: collapse;
+            width: 100%; /* Adjust to match your layout */
+            margin-bottom: 0.5em;
+        }
+        
+        .gmot-tracking-comparison caption {
+            margin-bottom: 0.5em;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        
+        .gmot-tracking-comparison th, 
+        .gmot-tracking-comparison td {
+            border: 1px solid black;
+            padding: 4pt;
+            text-align: center;
+        }
+        
+        .gmot-tracking-comparison code {
+            background-color: #f4f4f4;
+            padding: 2pt 4pt;
+        }
+        
+        .gmot-tracking-comparison strong {
+            font-weight: bold;
+        }
+
+        .gmot-ablation-study {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 0.5em;
+        }
+        
+        .gmot-ablation-study caption {
+            margin-bottom: 0.5em;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        
+        .gmot-ablation-study th, 
+        .gmot-ablation-study td {
+            border: 1px solid black;
+            padding: 4pt;
+            text-align: center;
+        }
+        
+        .gmot-ablation-study code {
+            background-color: #f4f4f4;
+            padding: 2pt 4pt;
+        }
+        
+        .gmot-ablation-study strong {
+            font-weight: bold;
+        }
+        
+        .gmot-ablation-study i {
+            font-style: italic;
+        }
+        
+        .gmot-ablation-study td {
+            vertical-align: middle;
+        }
+
+    </style>
 </head>
+</head>
+
+
 
 <body>
     <div class="navbar">
-        <h2>Open-GMOT demo website</h2>
+        <h3>Open-GMOT demo website</h3>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="result.html">Result</a></li>
@@ -51,13 +235,16 @@
     <div class="n-article">
         <div class="n-page video">
              <!------------------------------------------------------Section Boundary-------------------------------------------------->
-            <h2 id="results">
-                Results
-            </h2>
-            <h3 class="results" id="qualitative">
+            <h2 class="results" id="qualitative">
                 Qualitative Result
-            </h3>
+            </h2>
             <div class="n-page video">
+                <p>
+                    We conduct extensive experiments to empirically prove the performance of our proposed Open-GMOT
+                    including both detection with Open-CSOD and association with MAC-SORT in the GMOT problem.
+                    Our strategy can help bridging the gap between human's intention and computer understanding to provide
+                    flexibility in tracking objects with distinctive characteristics follow input texts.
+                </p>
                 <!--             <video class="centered shadow" width="100%" autoplay muted loop playsinline>
                                 <!-- t=0.001 is a hack to make iPhone show video thumbnail -->
                 <!--                 <source src="https://www.youtube.com/embed/IvxeJRg4rYg" type="video/mp4" /> -->
@@ -65,105 +252,336 @@
                 <!--         <h2>
                             Narrated Results Video
                         </h2> --> 
-                        <p style="font-size: 20px; text-align: center;">Tracking prompt: 
-                            <span style="font-weight: bold; color: green;">"car</span>
-                            <span style="font-family: 'Courier New', monospace; font-weight: bold;">&nbsp;&lt;include&gt;</span>
-                            <span style="font-weight: bold; color: orange;">&nbsp;red color</span>
-                            <span style="font-family: 'Courier New', monospace; font-weight: bold;">&nbsp;&lt;exclude&gt;</span>
-                            <span style="font-weight: bold;  color: crimson;">&nbsp;yellow, blue, black, white color"</span>
-                        </p>
-                        <div class="videoWrapper shadow">
-                            <iframe width="560" height="315" border-style=none src="https://www.youtube.com/embed/MX8g-8NXx7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        
-                        <p style="font-size: 20px; text-align: center;">Tracking prompt: 
-                            <span style="font-weight: bold; color: green;">"car</span>
-                            <span style="font-family: 'Courier New', monospace; font-weight: bold;">&nbsp;&lt;include&gt;</span>
-                            <span style="font-weight: bold; color: orange;">&nbsp;yellow color</span>
-                            <span style="font-family: 'Courier New', monospace; font-weight: bold;">&nbsp;&lt;exclude&gt;</span>
-                            <span style="font-weight: bold; color: crimson;">&nbsp;red, blue, black, white color"</span>
-                        </p>
-                        <div class="videoWrapper shadow">
-                            <iframe width="560" height="315" border-style=none src="https://www.youtube.com/embed/H7nVN4VRhbk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    
-                        <p style="font-size: 20px; text-align: center;">Tracking prompt: 
-                            <span style="font-weight: bold; color: green;">"car</span>
-                            <span style="font-family: 'Courier New', monospace; font-weight: bold;">&nbsp;&lt;include&gt;</span>
-                            <span style="font-weight: bold; color: orange;">&nbsp;dark blue car</span>
-                            <span style="font-family: 'Courier New', monospace; font-weight: bold;">&nbsp;&lt;exclude&gt;</span>
-                            <span style="font-weight: bold; color: crimson;">&nbsp;red, yellow, black, white"</span>
-                        </p>
-                        <div class="videoWrapper shadow">
-                            <iframe width="560" height="315" border-style=none src="https://www.youtube.com/embed/E7mSlziENQ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-
-                        <p style="font-size: 22px; text-align: center;">Tracking prompt: 
-                            <span style="font-weight: bold; color: green;">"airplane</span>
-                            <span style="font-family: 'Courier New', monospace; font-weight: bold;">&nbsp;&lt;include&gt;</span>
-                            <span style="font-weight: bold; color: orange;">&nbsp;metal shell</span>
-                            <span style="font-family: 'Courier New', monospace; font-weight: bold;">&nbsp;&lt;exclude&gt;</span>
-                            <span style="font-weight: bold; color: crimson;">&nbsp;{none}"</span>
-                        </p>
-                        <div class="videoWrapper shadow">
-                            <iframe width="560" height="315" border-style=none src="https://www.youtube.com/embed/6Yte9nL2d0k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        
-                        <p style="font-size: 22px; text-align: center;">Tracking prompt: 
-                            <span style="font-weight: bold; color: green;">"helicopter</span>
-                            <span style="font-family: 'Courier New', monospace; font-weight: bold;">&nbsp;&lt;include&gt;</span>
-                            <span style="font-weight: bold; color: orange;">&nbsp;flying; rotor blades</span>
-                            <span style="font-family: 'Courier New', monospace; font-weight: bold;">&nbsp;&lt;exclude&gt;</span>
-                            <span style="font-weight: bold; color: crimson;">&nbsp;{none}"</span>
-                        </p>
-                        <div class="videoWrapper shadow">
-                            <iframe width="560" height="315" border-style=none src="https://www.youtube.com/embed/Eh5HJUSL9NE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="container">
+                            <div class="main-video-container">
+                                <div class="prompt">
+                                    <p style="font-size: 20px; text-align: center;">Tracking prompt: 
+                                        <span style="font-weight: bold; color: green;">"car</span>
+                                        <span style="font-family: 'Courier New', monospace; font-weight: bold;">&nbsp;&lt;include&gt;</span>
+                                        <span style="font-weight: bold; color: orange;">&nbsp;red color</span>
+                                        <span style="font-family: 'Courier New', monospace; font-weight: bold;">&nbsp;&lt;exclude&gt;</span>
+                                        <span style="font-weight: bold;  color: crimson;">&nbsp;yellow, blue, black, white color"</span>
+                                    </p>
+                                </div>
+                                <div class="videoWrapper shadow">
+                                    <iframe width="560" height="315" border-style=none src="https://www.youtube.com/embed/MX8g-8NXx7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loop controls class="main-video"></iframe>
+                                </div>
+                            </div>
+                            <div class="video-list-container" id="videosList"></div>
+                            <script src="js/video.js"></script>
                         </div>
             </div>
-            <p>
-                We conduct extensive experiments to empirically prove the performance of our proposed Open-GMOT
-                including both detection with Open-CSOD and association with MAC-SORT in the GMOT problem.
-                Our strategy can help bridging the gap between human's intention and computer understanding to provide
-                flexibility in tracking objects with distinctive characteristics follow input texts.
-            </p>
             
-            <h3 class="results" id="qunatitative">
+            <h2 class="results" id="qunatitative">
                 Quantitative Results
-            
-            </h3>
-            <div>
-                <img class="figure" src="media/table1.png" width="100%" alt="Table 1 Result">
-                <p style="font-size: 20px;">
-                    Table 1: <b>Open OD</b> comparison on G-MOT40 between our
-                    <b>Open-CSOD</b> with GLIP, iGLIP, GroundingDINO. The best score is in <b>bold</b>.
-                </p>
-            </div>
-            <div>
-                <img class="figure" src="media/table2.png" width="100%" alt="Table 1 Result">
-                <p style="font-size: 20px;">
-                    Table 2: <b>Tracking</b> comparison on <b>GMOT-40</b> dataset between our <b>MAC-SORT</b> with various trackers using OpenCSOD as object detector. The best performance of each tracker is highlighted in <b>bold</b>.
-                </p>
-            </div>
-            <div>
-                <img class="figure" src="media/table3.png" width="100%" alt="Table 1 Result">
-                <p style="font-size: 20px;">
-                    Table 3: <b>Tracking</b> comparison on <b>AnimalTrack-testset</b> between our <b>Open-CSOD</b> with existing object detectors and our <b>MAC-SORT</b> with other trackers. Faster-RNN and YOLO-X were fully-supervised (F-sup.) trained on AnimalTrack (denoted ‡) and MS-COCO (denoted ∗).
+            </h2>
+        
+        <p>In the following section, we delve into a detailed comparison showcased in <strong>Table 1</strong>. This table highlights the performance differences between our innovative <strong>Z-GMOT</strong> approach and other established fully-supervised MOT methods, specifically evaluated on the <em>Refer-Animal</em> dataset.</p>
 
-            </div>
-            <div>
-                <img class="figure" src="media/table4.png" width="100%" alt="Table 1 Result">
-                <p style="font-size: 20px;">
-                    Table 4: <b>Tracking</b> performance on <b>DanceTrack-testset</b>. We compare our <b>Open-GMOT</b> with other fully-supervised (Fsup.) MOT trained on DanceTrack-trainset and object detector YOLOX.
-                </p>
-            </div>
-            <div>
-                <img class="figure" src="media/table5.png" width="100%" alt="Table 1 Result">
-                <p style="font-size: 20px;">
-                    Table 5: Ablation study on the impact of each modules in our proposed Open-GMOT. SORT is substitute when MACSORT is not used.
-                </p>
-            </div>
-            
-            
+        <table class="gmot-tracking-comparison">
+            <caption><u>GMOT Tracking comparison</u> on <code>Refer-GMOT40</code> dataset between our <code><strong>CS-OD</strong></code> with existing SOTA OS-OD on with various SOTA trackers.</caption>
+            <thead>
+                <tr>
+                    <th><strong>Trackers</strong></th>
+                    <th><strong>Detectors</strong></th>
+                    <th><strong># shot</strong></th>
+                    <th><strong>HOTA</strong>↑</th>
+                    <th><strong>MOTA</strong>↑</th>
+                    <th><strong>IDF1</strong>↑</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">SORT</td>
+                    <td>OS-OD</td>
+                    <td>one-shot</td>
+                    <td>30.05</td>
+                    <td>20.83</td>
+                    <td>33.90</td>
+                </tr>
+                <tr>
+                    <td><strong><code>CS-OD</code>(Ours)</strong></td>
+                    <td>zero-shot</td>
+                    <td><strong>56.43</strong></td>
+                    <td><strong>66.72</strong></td>
+                    <td><strong>67.51</strong></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">DeepSORT</td>
+                    <td>OS-OD</td>
+                    <td>one-shot</td>
+                    <td>27.82</td>
+                    <td>17.96</td>
+                    <td>30.37</td>
+                </tr>
+                <tr>
+                    <td><strong><code>CS-OD</code>(Ours)</strong></td>
+                    <td>zero-shot</td>
+                    <td><strong>50.54</strong></td>
+                    <td><strong>60.21</strong></td>
+                    <td><strong>57.93</strong></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">ByteTrack</td>
+                    <td>OS-OD</td>
+                    <td>one-shot</td>
+                    <td>29.88</td>
+                    <td>20.29</td>
+                    <td>34.70</td>
+                </tr>
+                <tr>
+                    <td><strong><code>CS-OD</code>(Ours)</strong></td>
+                    <td>zero-shot</td>
+                    <td><strong>55.87</strong></td>
+                    <td><strong>64.79</strong></td>
+                    <td><strong>69.79</strong></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">MOTRv2</td>
+                    <td>OS-OD</td>
+                    <td>one-shot</td>
+                    <td>23.76</td>
+                    <td>13.87</td>
+                    <td>25.17</td>
+                </tr>
+                <tr>
+                    <td><strong><code>CS-OD</code>(Ours)</strong></td>
+                    <td>zero-shot</td>
+                    <td><strong>32.93</strong></td>
+                    <td><strong>18.70</strong></td>
+                    <td><strong>33.48</strong></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">OC-SORT</td>
+                    <td>OS-OD</td>
+                    <td>one-shot</td>
+                    <td>29.00</td>
+                    <td>19.96</td>
+                    <td>32.85</td>
+                </tr>
+                <tr>
+                    <td><strong><code>CS-OD</code>(Ours)</strong></td>
+                    <td>zero-shot</td>
+                    <td><strong>56.06</strong></td>
+                    <td><strong>63.69</strong></td>
+                    <td><strong>68.85</strong></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Deep-OCSORT</td>
+                    <td>OS-OD</td>
+                    <td>one-shot</td>
+                    <td>30.37</td>
+                    <td>21.10</td>
+                    <td>34.74</td>
+                </tr>
+                <tr>
+                    <td><strong><code>CS-OD</code>(Ours)</strong></td>
+                    <td>zero-shot</td>
+                    <td><strong>55.74</strong></td>
+                    <td><strong>65.53</strong></td>
+                    <td><strong>66.54</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><strong>Average gains by <code>CS-OD</code> across all trackers</strong></td>
+                    <td><strong>+22.78↑</strong></td>
+                    <td><strong>+37.61↑</strong></td>
+                    <td><strong>+28.73↑</strong></td>
+                </tr>
+            </tbody>
+        </table>
+        
+
+        <table class="gmot-tracking-comparison">
+            <caption><u>GMOT Tracking comparison</u> on <code>Refer-Animal</code> between our <strong><code>MAC-SORT</code></strong> and <strong><code>CS-OD</code></strong> with existing <i>fully-supervised MOT</i> methods. These methods utilize Faster R-CNN (FRCNN) and YOLOX trained on the AnimalTrack-trainset as their object detector. It is important to note that these fully-supervised methods are limited in their ability to handle category-agnostic tracking.</caption>
+            <thead>
+                <tr>
+                    <th rowspan="2"><strong>Trackers</strong></th>
+                    <th rowspan="2"><strong>Detectors</strong></th>
+                    <th><strong>Category</strong></th>
+                    <th rowspan="2"><strong>HOTA</strong>↑</th>
+                    <th rowspan="2"><strong>MOTA</strong>↑</th>
+                    <th rowspan="2"><strong>IDF1</strong>↑</th>
+                </tr>
+                <tr>
+                    <th><strong>Agnostic</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SORT</td>
+                    <td>FRCNN</td>
+                    <td>&times;</td>
+                    <td>42.80</td>
+                    <td>55.60</td>
+                    <td>49.20</td>
+                </tr>
+                <tr>
+                    <td>DeepSORT</td>
+                    <td>FRCNN</td>
+                    <td>&times;</td>
+                    <td>32.80</td>
+                    <td>41.40</td>
+                    <td>35.20</td>
+                </tr>
+                <tr>
+                    <td>ByteTrack</td>
+                    <td>YOLOX</td>
+                    <td>&times;</td>
+                    <td>40.10</td>
+                    <td>38.50</td>
+                    <td>51.20</td>
+                </tr>
+                <tr>
+                    <td>TransTrack</td>
+                    <td>YOLOX</td>
+                    <td>&times;</td>
+                    <td>45.40</td>
+                    <td>48.30</td>
+                    <td>53.40</td>
+                </tr>
+                <tr>
+                    <td>QDTrack</td>
+                    <td>YOLOX</td>
+                    <td>&times;</td>
+                    <td>47.00</td>
+                    <td>55.70</td>
+                    <td>56.30</td>
+                </tr>
+                <tr>
+                    <td>OC-SORT</td>
+                    <td>YOLOX</td>
+                    <td>&times;</td>
+                    <td>56.93</td>
+                    <td>65.02</td>
+                    <td><u>67.48</u></td>
+                </tr>
+                <tr>
+                    <td>Deep-OCSORT</td>
+                    <td>YOLOX</td>
+                    <td>&times;</td>
+                    <td>57.24</td>
+                    <td><u>68.05</u></td>
+                    <td>62.01</td>
+                </tr>
+                <tr>
+                    <td>MOTRv2</td>
+                    <td>YOLOX</td>
+                    <td>&times;</td>
+                    <td>52.07</td>
+                    <td>57.08</td>
+                    <td>62.07</td>
+                </tr>
+                <tr>
+                    <td><strong><code>MAC-SORT</code>(Ours)</strong></td>
+                    <td>YOLOX</td>
+                    <td>&times;</td>
+                    <td><strong>57.86</strong></td>
+                    <td><strong>68.32</strong></td>
+                    <td>63.01</td>
+                </tr>
+                <tr>
+                    <td><strong><code>MAC-SORT</code>(Ours)</strong></td>
+                    <td><strong><code>CS-OD</code> (Ours)</strong></td>
+                    <td>✔</td>
+                    <td><u>57.29</u></td>
+                    <td>66.46</td>
+                    <td><strong>68.37</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="gmot-ablation-study">
+            <caption><u>Ablation study of generalizability</u> of <strong><code>Open-GMOT</code></strong> framework on <i>DanceTrack-valset</i> with <u>MOT task</u>. We compare our <strong><code>MAC-SORT</code></strong> and <strong><code>CS-OD</code></strong> with other <i>fully-supervised MOT</i> methods, which use YOLOX trained on DanceTrack-trainset as their object detector. Deep-OCOSRT denotes the reported results in the paper whereas Deep-OCOSRT$^\dag$ presents the reproduced results with the best settings suggested by the authors on our machine with the same object detector. It is important to note that these existing fully-supervised methods are limited in their ability to handle category-agnostic tracking.</caption>
+            <thead>
+                <tr>
+                    <th rowspan="2"><strong>Trackers</strong></th>
+                    <th rowspan="2"><strong>Detectors</strong></th>
+                    <th><strong>Category</strong></th>
+                    <th rowspan="2"><strong>HOTA</strong>↑</th>
+                    <th rowspan="2"><strong>MOTA</strong>↑</th>
+                    <th rowspan="2"><strong>IDF1</strong>↑</th>
+                </tr>
+                <tr>
+                    <th><strong>Agnostic</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SORT</td>
+                    <td>YOLOX</td>
+                    <td>&times;</td>
+                    <td>47.80</td>
+                    <td><strong>88.20</strong></td>
+                    <td>48.30</td>
+                </tr>
+                <tr>
+                    <td>DeepSORT</td>
+                    <td>YOLOX</td>
+                    <td>&times;</td>
+                    <td>45.80</td>
+                    <td>87.10</td>
+                    <td>46.80</td>
+                </tr>
+                <tr>
+                    <td>MOTDT</td>
+                    <td>YOLOX</td>
+                    <td>&times;</td>
+                    <td>39.20</td>
+                    <td>84.30</td>
+                    <td>39.60</td>
+                </tr>
+                <tr>
+                    <td>ByteTrack</td>
+                    <td>YOLOX</td>
+                    <td>&times;</td>
+                    <td>47.10</td>
+                    <td><strong>88.20</strong></td>
+                    <td>51.90</td>
+                </tr>
+                <tr>
+                    <td>OC-SORT</td>
+                    <td>YOLOX</td>
+                    <td>&times;</td>
+                    <td>52.10</td>
+                    <td><u>87.30</u></td>
+                    <td>51.60</td>
+                </tr>
+                <tr>
+                    <td style="color: gray;">Deep-OCSORT</td>
+                    <td style="color: gray;">YOLOX</td>
+                    <td style="color: gray;">&times;</td>
+                    <td style="color: gray;">58.53</td>
+                    <td style="color: gray;">--</td>
+                    <td style="color: gray;">59.06</td>
+                </tr>
+                <tr>
+                    <td>Deep-OCSORT$^\dag$</td>
+                    <td>YOLOX</td>
+                    <td>&times;</td>
+                    <td>49.36</td>
+                    <td>84.82</td>
+                    <td>48.89</td>
+                </tr>
+                <tr>
+                    <td><strong><code>MAC-SORT</code>(Ours)</strong></td>
+                    <td>YOLOX</td>
+                    <td>&times;</td>
+                    <td><strong>53.78</strong></td>
+                    <td>86.85</td>
+                    <td><strong>54.06</strong></td>
+                </tr>
+                <tr>
+                    <td><strong><code>MAC-SORT</code>(Ours)</strong></td>
+                    <td><strong><code>CS-OD</code> (Ours)</strong></td>
+                    <td>✔</td>
+                    <td>48.75</td>
+                    <td>81.74</td>
+                    <td>48.02</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        
 
         </div>
     </div>
