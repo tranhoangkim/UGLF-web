@@ -34,7 +34,7 @@ const videosList = [
     },
     {
         video: 'https://www.youtube.com/embed/6Yte9nL2d0k',
-        title: 'Airplane',
+        title: 'Airplanes',
         prompt: `<p style="font-size: 22px; text-align: center;">Tracking prompt: 
         <span style="font-weight: bold; color: green;">"airplane</span>
         <span style="font-family: 'Courier New', monospace; font-weight: bold;">&nbsp;&lt;include&gt;</span>
@@ -45,7 +45,7 @@ const videosList = [
     },
     {
         video: 'https://www.youtube.com/embed/Eh5HJUSL9NE',
-        title: 'Helicopter',
+        title: 'Helicopters',
         prompt: `<p style="font-size: 22px; text-align: center;">Tracking prompt: 
         <span style="font-weight: bold; color: green;">"helicopter</span>
         <span style="font-family: 'Courier New', monospace; font-weight: bold;">&nbsp;&lt;include&gt;</span>
