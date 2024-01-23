@@ -364,30 +364,34 @@
         </div>
         
         <div class="image-json-container">
-            <img src="media/dataset_animaltrack.jpg" alt="Image 1" class="image-dataset">
+            <img src="media/dataset-airplane.jpg" alt="Image 1" class="image-dataset">
             <pre class="json-dataset">
-              <b>“video”</b>: ball-0
-              <b>“label”</b>: [{
-                  &nbsp;&nbsp;&nbsp;&nbsp;<b>”object"</b>: "stock"
-                  &nbsp;&nbsp;&nbsp;&nbsp;<b>“object_synonym”</b>: ["sphere, "billard ball",
-                  <div style="padding-left:13.00em;"> "billard sphere"]</div>&nbsp;&nbsp;&nbsp;&nbsp;<b>“attribute”</b>: ["circle", "round", red"]
-                  &nbsp;&nbsp;&nbsp;&nbsp;<b>“other_attributes”</b>: ["small", "smooth", "numbering",
-                  <div style="padding-left:13.00em;">"glossy"]</div>&nbsp;&nbsp;&nbsp;&nbsp;<b>“tracks”</b>: {ball-0.txt}
-              }]
+                <b>"video":</b> "airplane-1",
+                <b>"label":</b>[ {
+                    &nbsp;&nbsp;&nbsp;&nbsp;<b>"class_name":</b> "helicopter",
+                    &nbsp;&nbsp;&nbsp;&nbsp;<b>"class_synonyms":</b>["airplane", "aircraft", "jet", "plane"],
+                    &nbsp;&nbsp;&nbsp;&nbsp;<b>"definition":</b> "a vehicle designed for flight in the air",
+                    &nbsp;&nbsp;&nbsp;&nbsp;<b>"include_attributes":</b> ["black", "flying"],
+                    &nbsp;&nbsp;&nbsp;&nbsp;<b>"exclude_attributes":</b> [],
+                    &nbsp;&nbsp;&nbsp;&nbsp;<b>"caption":</b> "Track all black flying helicopters"],
+                    &nbsp;&nbsp;&nbsp;&nbsp;<b>"track_path":</b> airplane_01.text
+                } ]
             </pre>
           </div>
 
           <div class="image-json-container">
-            <img src="media/dataset_dancetrack.jpg" alt="Image 1" class="image-dataset">
+            <img src="media/dataset-car.jpg" alt="Image 1" class="image-dataset">
             <pre class="json-dataset">
-              <b>“video”</b>: car-1
-              <b>“label”</b>: [{
-                  &nbsp;&nbsp;&nbsp;&nbsp;<b>”object"</b>: "car"
-                  &nbsp;&nbsp;&nbsp;&nbsp;<b>“object_synonym”</b>: ["transport, "vehicle"]
-                  &nbsp;&nbsp;&nbsp;&nbsp;<b>“attribute”</b>: ["white light"]
-                  &nbsp;&nbsp;&nbsp;&nbsp;<b>“other_attributes”</b>: ["frontal side", "night covered"]
-                  &nbsp;&nbsp;&nbsp;&nbsp;<b>“tracks”</b>: {car-1.txt}
-              }]
+              <b>"video":</b> car-1
+              <b>"label":</b> [{
+                  &nbsp;&nbsp;&nbsp;&nbsp;<b>"class_name":</b> "car",
+                  &nbsp;&nbsp;&nbsp;&nbsp;<b>"class_synonyms":</b> ["vehicle", "automobile", "auto", "transport", "transportation"],
+                  &nbsp;&nbsp;&nbsp;&nbsp;<b>"definition":</b> "mechanical device designed for transportation, powered by an engine or motor, equipped by four wheels",
+                  &nbsp;&nbsp;&nbsp;&nbsp;<b>"include_attributes": </b> ["white headlight", "oncoming traffic"],
+                  &nbsp;&nbsp;&nbsp;&nbsp;<b>"exclude_attributes": </b> [red taillight, opposite traffic],
+                  &nbsp;&nbsp;&nbsp;&nbsp;<b>"caption": </b> "Track white headlight cars while excluding red taillight cars",
+                  &nbsp;&nbsp;&nbsp;&nbsp;<b>"track_path":</b> "car_01.txt",
+              } ]
             </pre>
           </div>
         </p>
