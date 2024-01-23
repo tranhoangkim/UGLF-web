@@ -21,6 +21,7 @@
         table {
             width: 100%;
             border-collapse: collapse;
+            font-family: Arial, sans-serif;
         }
 
         caption {
@@ -34,11 +35,60 @@
             text-align: center;
         }
 
+        .checkmark {
+            color: green;
+        }
+        .xmark {
+            color: red;
+        }
+
         .asparagus30 { background-color: #88B04B; } /* Replace with actual color */
         .almond30 { background-color: #EFDECD; } /* Replace with actual color */
+        .almond50 { background-color: #e6ceb6; }
         .babyblue20 { background-color: #89CFF0; } /* Replace with actual color */
-        .aureolin20 { background-color: #FDEE00; } /* Replace with actual color */
+        .aureolin20 { background-color: #FDEE00; }
+        .aureolin50 { background-color: #ebdd14; } /* Replace with actual color */
 
+        .image-container {
+            display: flex;
+        }
+
+        /* Create three equal columns that sits next to each other */
+        .image-content {
+            margin: 10px;
+            flex: 1;
+            text-align: center !important;
+        }
+
+        .pre-container {
+            overflow: auto; /* Enable scrolling if the content overflows */
+            text-align: left;
+            white-space: pre-wrap; /* Allow long lines to wrap within the container */
+            width: calc(100%/2 - 20px); /* Prevent the <pre> from exceeding the parent's width */
+            max-height: 100%; /* Prevent the <pre> from exceeding the parent's height */
+        }
+
+        .image-json-container {
+            display: flex;
+            height: 220px;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px 0 0 0;
+        }
+
+        .image-dataset {
+            max-height: 100%;
+            object-fit: cover;
+            padding: 0 0 12px 0;
+        }
+
+        .json-dataset {
+            flex-grow: 1; /* Allow the text to take up remaining space */
+            overflow: auto; /* Add overflow property for text scrolling if needed */
+            text-align: left;
+            height: 96%;
+            white-space: pre-line; /* Preserve whitespace in the <pre> tag */
+        }
     </style>
 </head>
 
@@ -91,46 +141,46 @@
             </thead>
             <tbody>
                 <!-- SOT Section -->
-                <tr class="asparagus30">
+                <tr class="almond30">
                     <td rowspan="5">SOT</td>
                     <td>OTB2013~[1]</td>
-                    <td>&times;</td>
+                    <td class="xmark">✖</td>
                     <td>10</td>
                     <td>51</td>
                     <td>29K</td>
                     <td>51</td>
                     <td>29K</td>
                 </tr>
-                <tr class="asparagus30">
+                <tr class="almond30">
                     <td>VOT2017~[2]</td>
-                    <td>&times;</td>
+                    <td class="xmark">✖</td>
                     <td>24</td>
                     <td>60</td>
                     <td>21K</td>
                     <td>60</td>
                     <td>21K</td>
                 </tr>
-                <tr class="asparagus30">
+                <tr class="almond30">
                     <td>TrackingNet~[3]</td>
-                    <td>&times;</td>
+                    <td class="xmark">✖</td>
                     <td>21</td>
                     <td>31K</td>
                     <td>14M</td>
                     <td>31K</td>
                     <td>14M</td>
                 </tr>
-                <tr class="asparagus50">
+                <tr class="almond50">
                     <td>LaSOT~[4]</td>
-                    <td>&#10003;</td>
+                    <td class="checkmark">✔</td>
                     <td>70</td>
                     <td>1.4K</td>
                     <td>3.52M</td>
                     <td>1.4K</td>
                     <td>3.52M</td>
                 </tr>
-                <tr class="asparagus50">
+                <tr class="almond50">
                     <td>TNL2K~[5]</td>
-                    <td>&#10003;</td>
+                    <td class="checkmark">✔</td>
                     <td>-</td>
                     <td>2K</td>
                     <td>1.24M</td>
@@ -138,19 +188,19 @@
                     <td>1.24M</td>
                 </tr>
                 <!-- GSOT Section -->
-                <tr class="almond30">
+                <tr class="asparagus30">
                     <td rowspan="2">GSOT</td>
                     <td>GOT-10~[6]</td>
-                    <td>&times;</td>
+                    <td class="xmark">✖</td>
                     <td>563</td>
                     <td>10K</td>
                     <td>1.5M</td>
                     <td>10K</td>
                     <td>1.5M</td>
                 </tr>
-                <tr class="almond30">
+                <tr class="asparagus30">
                     <td>Fish~[7]</td>
-                    <td>&times;</td>
+                    <td class="xmark">✖</td>
                     <td>1</td>
                     <td>1.6K</td>
                     <td>527.2K</td>
@@ -161,7 +211,7 @@
                 <tr class="babyblue20">
                     <td rowspan="6">MOT</td>
                     <td>MOT17~[8]</td>
-                    <td>&times;</td>
+                    <td class="xmark">✖</td>
                     <td>1</td>
                     <td>14</td>
                     <td>11.2K</td>
@@ -170,7 +220,7 @@
                 </tr>
                 <tr class="babyblue20">
                     <td>MOT20~[9]</td>
-                    <td>&times;</td>
+                    <td class="xmark">✖</td>
                     <td>1</td>
                     <td>8</td>
                     <td>13.41K</td>
@@ -179,7 +229,7 @@
                 </tr>
                 <tr class="babyblue20">
                     <td>Omni-MOT~[10]</td>
-                    <td>&times;</td>
+                    <td class="xmark">✖</td>
                     <td>1</td>
                     <td>-</td>
                     <td>14M+</td>
@@ -188,7 +238,7 @@
                 </tr>
                 <tr class="babyblue20">
                     <td>DanceTrack~[11]</td>
-                    <td>&times;</td>
+                    <td class="xmark">✖</td>
                     <td>1</td>
                     <td>100</td>
                     <td>105K</td>
@@ -197,7 +247,7 @@
                 </tr>
                 <tr class="babyblue20">
                     <td>TAO~[12]</td>
-                    <td>&times;</td>
+                    <td class="xmark">✖</td>
                     <td>833</td>
                     <td>2.9K</td>
                     <td>2.6M</td>
@@ -206,7 +256,7 @@
                 </tr>
                 <tr class="babyblue20">
                     <td>SportMOT~[13]</td>
-                    <td>&times;</td>
+                    <td class="xmark">✖</td>
                     <td>1</td>
                     <td>240</td>
                     <td>150K</td>
@@ -215,27 +265,36 @@
                 </tr>
                 <!-- GMOT Section -->
                 <tr class="aureolin20">
-                    <td rowspan="3">GMOT</td>
+                    <td rowspan="4">GMOT</td>
                     <td>AnimalTrack~[14]</td>
-                    <td>&times;</td>
+                    <td class="xmark">✖</td>
                     <td>10</td>
                     <td>58</td>
                     <td>24.7K</td>
                     <td>1.92K</td>
                     <td>429K</td>
                 </tr>
-                <tr class="aureolin40">
-                    <td>Refer-GMOT40 (Ours)</td>
-                    <td>&#10003;</td>
+                <tr class="aureolin20">
+                    <td>GMOT-40~[15]</td>
+                    <td class="xmark">✖</td>
                     <td>10</td>
                     <td>40</td>
                     <td>9K</td>
                     <td>2.02K</td>
                     <td>256K</td>
                 </tr>
-                <tr class="aureolin40">
+                <tr class="aureolin50" style=" font-weight: bold; font-family: 'Courier New', Courier, monospace;">
+                    <td>Refer-GMOT40 (Ours)</td>
+                    <td class="checkmark">✔</td>
+                    <td>10</td>
+                    <td>40</td>
+                    <td>9K</td>
+                    <td>2.02K</td>
+                    <td>256K</td>
+                </tr>
+                <tr class="aureolin50" style=" font-weight: bold; font-family: 'Courier New', Courier, monospace;">
                     <td>Refer-Animal (Ours)</td>
-                    <td>&#10003;</td>
+                    <td class="checkmark">✔</td>
                     <td>10</td>
                     <td>58</td>
                     <td>24.7K</td>
@@ -245,79 +304,92 @@
             </tbody>
         </table>
         
-        <p>
-           We offer a dataset that surpasses existing official tracking datasets, such as <b>GMOT-40</b>, <b>AnimalTrack</b> and <b>DanceTrack</b>,
-           in terms of advancement. Our dataset includes videos with a wider range of generic objects, each accompanied
-           by its respective textual descriptions. Our dataset with textual description annotations are formatted in COCO format.
-           Each generic object is labeled as follows:
-           <pre>
-            {
-                "video": "",
-                "labels": [
-                    {
-                        "class_name": "",
-                        "synonyms": [],
-                        "caption": "",
-                        "box_labels: {}"
-                    },
-                    {
-                        "class_name": "",
-                        "synonyms": [],
-                        "caption": "",
-                        "box_labels: {}"
-                    },
-                            ...
-                ]
-            }
+        <div>
+            <p>In our research, we improved two existing datasets for tracking multiple objects (GMOT-40 and AnimalTrack) by adding text descriptions. These enhanced datasets are named 'Refer-GMOT40' and 'Refer-Animal'.</p>
+            <p>'Refer-GMOT40' includes 40 videos covering 10 different types of real-world objects, with each type having 4 video sequences. 'Refer-Animal' contains 26 videos focusing on 10 common types of animals.</p>
+            <p>Each video in these datasets has been carefully annotated with several details:</p>
+            <ul>
+                <p style="font-weight: bold; font-style: italic;">For text label:</p> 
+                <li><strong>Class Name:</strong> The general category of objects being tracked.</li>
+                <li><strong>Class Synonyms:</strong> Other names or terms for the class.</li>
+                <li><strong>Definition:</strong> A description of the objects being tracked.</li>
+                <li><strong>Include Attributes:</strong> Characteristics of the tracked objects based on what can be seen.</li>
+                <li><strong>Exclude Attributes:</strong> Characteristics that identify objects within the same category that are not being tracked.</li>
+                <li><strong>Caption:</strong> Descriptions of the objects being tracked. For tracking all objects in a class, the caption is in the format: "Track [visible attributes] [class name]". When tracking a specific subset, the format is: "Track [visible attributes] [class name] while excluding [untracked attributes] [class name]".</li>
+                <li><strong>Track Path:</strong> The exact tracking path is stored separately, following the standard format for multiple object tracking challenges.</li>
+                <p style="font-weight: bold; font-style: italic;">For track label:</p>
+                <p>each line will contain 9 elements, seperated by commas</p>
+                <p style="color: red;">&lt;frame&gt;, &lt;id&gt;, &lt;bb_left&gt;, &lt;bb_top&gt;, &lt;bb_width&gt;, &lt;bb_height&gt;, &lt;conf&gt;, &lt;x&gt;, &lt;y&gt;, &lt;z&gt;</p>
+                <li><b>frame:</b> index of frame in video sequence</li>
+                <li><b>id</b>: id of object accord to tracker</li>
+                <li><b>bb_left:</b> x coordinate for top left</li>
+                <li><b>bb_top:</b> y coordinate for top left</li>
+                <li><b>bb_width:</b> width of the box that contains object</li>
+                <li><b>bb_height:</b> height of the box that contains object</li>
+                <li><b>conf:</b> confidence score but get 1 as default</li>
+                <li><b>x:</b> get 1 as default</li>
+                <li><b>y:</b> get 1 as default</li>
+            </ul>
+            <p>The annotations are formatted in JSON, and we provide examples to illustrate how they are structured. This data, prepared by 4 annotators, will be shared publicly.</p>
+            <div class="image-container">
+                <pre class="pre-container" style="border-right: 1px solid #ffffff;">
+<b>Text label for referring with specific attributes</b>
+{
+    "video": "",
+    "label":[{
+        "class_name": "",
+        "class_synonyms":[],
+        definition: "",
+        include_attributes: []
+        exclude_attributes: []
+        caption: "",
+        track_path: "",
+    }]
+}
+                    </pre>
+    
+                    <pre class="pre-container">
+<b>Track label for associating objects' IDs through time</b>
+1, 1, xl, yl, xr, yr, 1, 1, 1
+1, 2, xl, yl, xr, yr, 1, 1, 1
+1, 3, xl, yl, xr, yr, 1, 1, 1
+2, 1, xl, yl, xr, yr, 1, 1, 1
+2, 2, xl, yl, xr, yr, 1, 1, 1
+2, 3, xl, yl, xr, yr, 1, 1, 1
+3, 1, xl, yl, xr, yr, 1, 1, 1
+3, 2, xl, yl, xr, yr, 1, 1, 1
+3, 3, xl, yl, xr, yr, 1, 1, 1
+                        </pre>
+               </div>
+        </div>
+        
+        <div class="image-json-container">
+            <img src="media/dataset_animaltrack.jpg" alt="Image 1" class="image-dataset">
+            <pre class="json-dataset">
+              <b>“video”</b>: ball-0
+              <b>“label”</b>: [{
+                  &nbsp;&nbsp;&nbsp;&nbsp;<b>”object"</b>: "stock"
+                  &nbsp;&nbsp;&nbsp;&nbsp;<b>“object_synonym”</b>: ["sphere, "billard ball",
+                  <div style="padding-left:13.00em;"> "billard sphere"]</div>&nbsp;&nbsp;&nbsp;&nbsp;<b>“attribute”</b>: ["circle", "round", red"]
+                  &nbsp;&nbsp;&nbsp;&nbsp;<b>“other_attributes”</b>: ["small", "smooth", "numbering",
+                  <div style="padding-left:13.00em;">"glossy"]</div>&nbsp;&nbsp;&nbsp;&nbsp;<b>“tracks”</b>: {ball-0.txt}
+              }]
             </pre>
-           <ul>
-               <li><b>“Video”</b>: video name. For example "airplane-0" </li>
-               <li><b>”Class Name"</b>: particular generic objects type. For example, helicopter</li>
-               <li><b>“Synonyms”</b>: synonym of object. For example, aircraft, air-plane</li>
-               <li><b>“Caption”</b>: The caption is followed the format:
-                   <p style="font-size: 20px; text-align: center;">
-                       <span style="font-family: 'Courier New', monospace; font-weight: bold; color: green;">&lt;attribute.object&gt;</span>
-                       &nbsp;include&nbsp;  <span style="font-family: 'Courier New', monospace; font-weight: bold; color: orange;">&lt;attribute.part&gt;</span>
-                       &nbsp;exclude&nbsp;  <span style="font-family: 'Courier New', monospace; font-weight: bold; color: crimson;">&lt;attribute.part&gt;</span>
-                   </p>
-               </li>
-           </ul>
-           <div class="image-container">
-               <div class="image-content">
-                    <img src="media/dataset_gmot40.jpg" alt="Image 1" style="width:100%">
-                    <pre class="pre-container" style="text-align: left;">
-                    {
-                        &nbsp;&nbsp;<b>“Video”</b>: stock-3
-                        &nbsp;&nbsp;<b>”Class Name"</b>: stock
-                        &nbsp;&nbsp;<b>“Synonyms”</b>: [“wolf”, “dog”]
-                        &nbsp;&nbsp;<b>“Caption”</b>:<span style="font-family: 'Courier New', monospace; font-weight: bold; color: green;">stock</span> include  <span style="font-family: 'Courier New', monospace; font-weight: bold; color: orange;">grey wolf</span> exclude  <span style="font-family: 'Courier New', monospace; font-weight: bold; color: crimson;">black buffalo</span>
-                    }
-                    </pre>
-               </div>
-               <div class="image-content">
-                   <img src="media/dataset_animaltrack.jpg" alt="Image 2" style="width:100%">
-                   <pre class="pre-container" style="text-align: left;">
-                    {
-                        &nbsp;&nbsp;<b>“Video”</b>: horse_7 
-                        &nbsp;&nbsp;<b>”Class Name"</b>: car
-                        &nbsp;&nbsp;<b>“Synonyms”</b>: [“equine”, “steed”, “four-legged animal”]
-                        &nbsp;&nbsp;<b>“Caption”</b>: <span style="font-family: 'Courier New', monospace; font-weight: bold; color: green;">horse</span> include  <span style="font-family: 'Courier New', monospace; font-weight: bold; color: orange;">on the ground</span> exclude  <span style="font-family: 'Courier New', monospace; font-weight: bold; color: crimson;">in the river</span>
-                    }
-                   </pre>
-               </div>
-               <div class="image-content">
-                   <img src="media/dataset_dancetrack.jpg" alt="Image 2" style="width:100%">
-                   <pre class="pre-container" style="text-align: left;">
-                    {
-                        &nbsp;&nbsp;<b>“Video”</b>: dancetrack0032 
-                        &nbsp;&nbsp;<b>”Class Name"</b>: person
-                        &nbsp;&nbsp;<b>“Synonyms”</b>: [“human”, “athlete”, “dancer”, “tin soldier”, “performer”]
-                        &nbsp;&nbsp;<b>“Caption”</b>: <span style="font-family: 'Courier New', monospace; font-weight: bold; color: green;">person</span> include  <span style="font-family: 'Courier New', monospace; font-weight: bold; color: orange;">on stage, in guard uniform</span> exclude  <span style="font-family: 'Courier New', monospace; font-weight: bold; color: crimson;">{None}</span>
-                    }
-                    </pre>
-               </div>
-               <!-- Add more images with captions as needed -->
-           </div>
+          </div>
+
+          <div class="image-json-container">
+            <img src="media/dataset_dancetrack.jpg" alt="Image 1" class="image-dataset">
+            <pre class="json-dataset">
+              <b>“video”</b>: car-1
+              <b>“label”</b>: [{
+                  &nbsp;&nbsp;&nbsp;&nbsp;<b>”object"</b>: "car"
+                  &nbsp;&nbsp;&nbsp;&nbsp;<b>“object_synonym”</b>: ["transport, "vehicle"]
+                  &nbsp;&nbsp;&nbsp;&nbsp;<b>“attribute”</b>: ["white light"]
+                  &nbsp;&nbsp;&nbsp;&nbsp;<b>“other_attributes”</b>: ["frontal side", "night covered"]
+                  &nbsp;&nbsp;&nbsp;&nbsp;<b>“tracks”</b>: {car-1.txt}
+              }]
+            </pre>
+          </div>
         </p>
     </div>
 
