@@ -179,8 +179,9 @@
 
         .ablation-study-theta, .ablation-study-modules {
             border-collapse: collapse;
-            width: 80%; /* Adjust as needed */
+            width: 60%; /* Adjust as needed */
             margin-bottom: 1em;
+            margin: auto;
         }
 
         .ablation-study-theta th, .ablation-study-theta td, .ablation-study-modules th, .ablation-study-modules td {
@@ -218,6 +219,7 @@
             border-collapse: collapse;
             width: 60%; /* Adjust to 0.6 of the column width as in LaTeX */
             margin-bottom: 0.5em;
+            margin: auto;
         }
         
         .ablation-study-mac-sort th, 
@@ -297,12 +299,12 @@
                         <div class="container">
                             <div class="main-video-container">
                                 <div class="prompt">
-                                    <p style="font-size: 20px; text-align: center;">Tracking prompt: 
-                                        <span style="font-weight: bold; color: green;">"car</span>
-                                        <span style="font-family: 'Courier New', monospace; font-weight: bold;">&nbsp;&lt;include&gt;</span>
+                                    <p style="font-family: 'Courier New', monospace; font-weight: bold;">&nbsp;&lt;P_general&gt;&nbsp;
+                                        <span style="font-weight: bold; color: green;">car</span>
+                                        <span style="font-family: 'Courier New', monospace; font-weight: bold;">&nbsp;&lt;P_include&gt;</span>
                                         <span style="font-weight: bold; color: orange;">&nbsp;red color</span>
-                                        <span style="font-family: 'Courier New', monospace; font-weight: bold;">&nbsp;&lt;exclude&gt;</span>
-                                        <span style="font-weight: bold;  color: crimson;">&nbsp;yellow, blue, black, white color"</span>
+                                        <span style="font-family: 'Courier New', monospace; font-weight: bold;">&nbsp;&lt;P_exclude&gt;</span>
+                                        <span style="font-weight: bold;  color: crimson;">&nbsp;yellow, blue, black, white color</span>
                                     </p>
                                 </div>
                                 <div class="videoWrapper shadow">
@@ -720,8 +722,8 @@
             </tbody>
         </table>
 
+    <br><br><caption><span style="font-weight: bold; text-align: center;"><u>Ablation study on the effectiveness of <code>MAC-SORT</code></u> on <i>MOT20-testset</i> with <u>MOT task</u>. We compare our <strong><code>MAC-SORT</code></strong> with other SORT-based <i>MOT</i> methods. As ByteTrack, OC-SORT uses different thresholds for testset sequences and offline interpolation procedure, we also report scores by disabling these as in ByteTrack&dagger;, OC-SORT&dagger;. As Deep OC-SORT used separated weights for YOLOX object detector, we also report scores by retraining YOLOX on MOT20-trainset as in Deep OC-SORT&dagger;.</span></caption>
         <table class="ablation-study-mac-sort">
-            <caption><u>Ablation study on the effectiveness of <code>MAC-SORT</code></u> on <i>MOT20-testset</i> with <u>MOT task</u>. We compare our <strong><code>MAC-SORT</code></strong> with other SORT-based <i>MOT</i> methods. As ByteTrack, OC-SORT uses different thresholds for testset sequences and offline interpolation procedure, we also report scores by disabling these as in ByteTrack&dagger;, OC-SORT&dagger;. As Deep OC-SORT used separated weights for YOLOX object detector, we also report scores by retraining YOLOX on MOT20-trainset as in Deep OC-SORT&dagger;.</caption>
             <thead>
                 <tr>
                     <th><strong>Trackers</strong></th>
@@ -796,53 +798,6 @@
                     <td><strong>62.6</strong></td>
                     <td><u>75.2</u></td>
                     <td><strong>76.9</strong></td>
-                </tr>
-            </tbody>
-        </table>
-        
-        <table class="ablation-study-theta">
-            <caption><u>Ablation study of &theta;</u> in computing <code>W<sub>amw</sub></code> on <code>Refer-GMOT40</code> dataset.</caption>
-            <thead>
-                <tr>
-                    <th rowspan="2">&theta;</th>
-                    <th colspan="2">Standard MOT metrics</th>
-                    <th colspan="2">ID metrics</th>
-                </tr>
-                <tr>
-                    <th>HOTA↑</th>
-                    <th>MOTA↑</th>
-                    <th>IDF1↑</th>
-                    <th>IDR↑</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>22.5&deg;</td>
-                    <td>57.54</td>
-                    <td>66.82</td>
-                    <td>69.29</td>
-                    <td>64.16</td>
-                </tr>
-                <tr>
-                    <td>45 (default)&deg;</td>
-                    <td><strong>59.26</strong></td>
-                    <td><strong>68.03</strong></td>
-                    <td><strong>70.86</strong></td>
-                    <td><strong>68.39</strong></td>
-                </tr>
-                <tr>
-                    <td>67.5&deg;</td>
-                    <td>58.06</td>
-                    <td>67.37</td>
-                    <td>70.46</td>
-                    <td>65.24</td>
-                </tr>
-                <tr>
-                    <td>80&deg;</td>
-                    <td>58.21</td>
-                    <td>65.81</td>
-                    <td>70.13</td>
-                    <td>68.30</td>
                 </tr>
             </tbody>
         </table>
