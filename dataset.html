@@ -374,7 +374,7 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;<b>include_attributes:</b> ["black", "flying"],
                     &nbsp;&nbsp;&nbsp;&nbsp;<b>exclude_attributes:</b> [],
                     &nbsp;&nbsp;&nbsp;&nbsp;<b>caption:</b> "Track all black flying helicopters"],
-                    &nbsp;&nbsp;&nbsp;&nbsp;<b>track_path:</b> airplane_01.text
+                    &nbsp;&nbsp;&nbsp;&nbsp;<b>track_path:</b> "airplane_01.txt"
                 }
             </pre>
           </div>
@@ -382,13 +382,13 @@
           <div class="image-json-container">
             <img src="media/dataset-car.jpg" alt="Image 1" class="image-dataset">
             <pre class="json-dataset">
-              <b>video:</b> car-1
+              <b>video:</b> "car-1"
               <b>label:</b>{
                   &nbsp;&nbsp;&nbsp;&nbsp;<b>class_name:</b> "car",
                   &nbsp;&nbsp;&nbsp;&nbsp;<b>class_synonyms:</b> ["vehicle", "automobile", "auto", "transport", "transportation"],
                   &nbsp;&nbsp;&nbsp;&nbsp;<b>definition:</b> "mechanical device designed for transportation, powered by an engine or motor, equipped by four wheels",
                   &nbsp;&nbsp;&nbsp;&nbsp;<b>include_attributes: </b> ["white headlight", "oncoming traffic"],
-                  &nbsp;&nbsp;&nbsp;&nbsp;<b>exclude_attributes: </b> [red taillight, opposite traffic],
+                  &nbsp;&nbsp;&nbsp;&nbsp;<b>exclude_attributes: </b> ["red taillight", "opposite traffic"],
                   &nbsp;&nbsp;&nbsp;&nbsp;<b>caption: </b> "Track white headlight cars while excluding red taillight cars",
                   &nbsp;&nbsp;&nbsp;&nbsp;<b>track_path:</b> "car_01.txt",
               }
