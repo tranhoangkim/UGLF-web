@@ -242,6 +242,8 @@
             color: gray;
         }
 
+        .our-result { background-color: #f0ecec; }
+
     </style>
 </head>
 
@@ -316,7 +318,9 @@
                 Quantitative Results
             </h2>
         
-        <p>In the following section, we delve into a detailed comparison showcased in <strong>7 tables below</strong>. These tables highlight the performance differences between our innovative <strong>Open-GMOT</strong> approach and other established fully-supervised MOT methods, specifically evaluated the impact of each component in our method.</p>
+        <p>
+            We present a detailed comparison through seven tables below. The first two tables highlight the distinctions between our innovative <b>Open-GMOT</b> approach and the existing one-shot GMOT on the <b>Refer-GMOT dataset</b>. In the subsequent four tables, we demonstrate the effectiveness and generalization of <b>Open-GMOT</b> by comparing it with other state-of-the-art fully-supervised MOT methods on Refer-Animal, <b>DanceTrack</b> and <b>MOT20 datasets</b>. We also conduct an ablation study on the parameter <b>&theta; (theta)</b>, which measures the similarity between two vectors and plays a crucial role in adeptly balancing between motion and appearance during tracking using <b>MAC-SORT.</b>
+        </p>
 
         <table class="gmot-tracking-comparison">
             <caption><u>GMOT Tracking comparison</u> on <code>Refer-GMOT40</code> dataset between our <code><strong>CS-OD</strong></code> with existing SOTA OS-OD on with various SOTA trackers.</caption>
@@ -421,7 +425,7 @@
                     <td><strong>65.53</strong></td>
                     <td><strong>66.54</strong></td>
                 </tr>
-                <tr>
+                <tr class="our-result">
                     <td colspan="3"><strong>Average gains by <code>CS-OD</code> across all trackers</strong></td>
                     <td><strong>+22.78↑</strong></td>
                     <td><strong>+37.61↑</strong></td>
@@ -432,103 +436,61 @@
         
 
         <table class="gmot-tracking-comparison">
-            <caption><u>GMOT Tracking comparison</u> on <code>Refer-Animal</code> between our <strong><code>MAC-SORT</code></strong> and <strong><code>CS-OD</code></strong> with existing <i>fully-supervised MOT</i> methods. These methods utilize Faster R-CNN (FRCNN) and YOLOX trained on the AnimalTrack-trainset as their object detector. It is important to note that these fully-supervised methods are limited in their ability to handle category-agnostic tracking.</caption>
+            <caption><u>GMOT Tracking comparison</u> on <code>Refer-GMOT40</code> dataset between our <strong><code>MAC-SORT</code></strong> with various SOTA trackers.</caption>
             <thead>
                 <tr>
-                    <th rowspan="2"><strong>Trackers</strong></th>
-                    <th rowspan="2"><strong>Detectors</strong></th>
-                    <th><strong>Category</strong></th>
-                    <th rowspan="2"><strong>HOTA</strong>↑</th>
-                    <th rowspan="2"><strong>MOTA</strong>↑</th>
-                    <th rowspan="2"><strong>IDF1</strong>↑</th>
-                </tr>
-                <tr>
-                    <th><strong>Agnostic</strong></th>
+                    <th><strong>Trackers</strong></th>
+                    <th><strong>HOTA</strong>↑</th>
+                    <th><strong>MOTA</strong>↑</th>
+                    <th><strong>IDF1</strong>↑</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>SORT</td>
-                    <td>FRCNN</td>
-                    <td>&times;</td>
-                    <td>42.80</td>
-                    <td>55.60</td>
-                    <td>49.20</td>
+                    <td><u>56.43</u></td>
+                    <td><u>66.72</u></td>
+                    <td>67.51</td>
                 </tr>
                 <tr>
                     <td>DeepSORT</td>
-                    <td>FRCNN</td>
-                    <td>&times;</td>
-                    <td>32.80</td>
-                    <td>41.40</td>
-                    <td>35.20</td>
+                    <td>50.54</td>
+                    <td>60.21</td>
+                    <td>57.93</td>
                 </tr>
                 <tr>
                     <td>ByteTrack</td>
-                    <td>YOLOX</td>
-                    <td>&times;</td>
-                    <td>40.10</td>
-                    <td>38.50</td>
-                    <td>51.20</td>
-                </tr>
-                <tr>
-                    <td>TransTrack</td>
-                    <td>YOLOX</td>
-                    <td>&times;</td>
-                    <td>45.40</td>
-                    <td>48.30</td>
-                    <td>53.40</td>
-                </tr>
-                <tr>
-                    <td>QDTrack</td>
-                    <td>YOLOX</td>
-                    <td>&times;</td>
-                    <td>47.00</td>
-                    <td>55.70</td>
-                    <td>56.30</td>
+                    <td>55.87</td>
+                    <td>64.79</td>
+                    <td><u>69.79</u></td>
                 </tr>
                 <tr>
                     <td>OC-SORT</td>
-                    <td>YOLOX</td>
-                    <td>&times;</td>
-                    <td>56.93</td>
-                    <td>65.02</td>
-                    <td><u>67.48</u></td>
+                    <td>56.06</td>
+                    <td>63.69</td>
+                    <td>68.85</td>
                 </tr>
                 <tr>
                     <td>Deep-OCSORT</td>
-                    <td>YOLOX</td>
-                    <td>&times;</td>
-                    <td>57.24</td>
-                    <td><u>68.05</u></td>
-                    <td>62.01</td>
+                    <td>55.74</td>
+                    <td>65.53</td>
+                    <td>66.54</td>
                 </tr>
                 <tr>
                     <td>MOTRv2</td>
-                    <td>YOLOX</td>
-                    <td>&times;</td>
-                    <td>52.07</td>
-                    <td>57.08</td>
-                    <td>62.07</td>
+                    <td>32.93</td>
+                    <td>18.70</td>
+                    <td>33.48</td>
                 </tr>
-                <tr>
-                    <td><strong><code>MAC-SORT</code>(Ours)</strong></td>
-                    <td>YOLOX</td>
-                    <td>&times;</td>
-                    <td><strong>57.86</strong></td>
-                    <td><strong>68.32</strong></td>
-                    <td>63.01</td>
-                </tr>
-                <tr>
-                    <td><strong><code>MAC-SORT</code>(Ours)</strong></td>
-                    <td><strong><code>CS-OD</code> (Ours)</strong></td>
-                    <td>✔</td>
-                    <td><u>57.29</u></td>
-                    <td>66.46</td>
-                    <td><strong>68.37</strong></td>
+                <tr class="our-result">
+                    <td><strong><code>MAC-SORT</code> (Ours)</strong></td>
+                    <td><strong>58.58</strong></td>
+                    <td><strong>67.77</strong></td>
+                    <td><strong>71.70</strong></td>
                 </tr>
             </tbody>
         </table>
+        
 
         <table class="gmot-tracking-comparison">
             <caption><u>GMOT Tracking comparison</u> on <code>Refer-Animal</code> between our <strong><code>MAC-SORT</code></strong> and <strong><code>CS-OD</code></strong> with existing <i>fully-supervised MOT</i> methods. These methods utilize Faster R-CNN (FRCNN) and YOLOX trained on the AnimalTrack-trainset as their object detector. It is important to note that these fully-supervised methods are limited in their ability to handle category-agnostic tracking.</caption>
@@ -607,7 +569,7 @@
                     <td>57.08</td>
                     <td>62.07</td>
                 </tr>
-                <tr>
+                <tr class="our-result">
                     <td><strong><code>MAC-SORT</code> (Ours)</strong></td>
                     <td>YOLOX</td>
                     <td>&times;</td>
@@ -615,7 +577,7 @@
                     <td><strong>68.32</strong></td>
                     <td>63.01</td>
                 </tr>
-                <tr>
+                <tr class="our-result">
                     <td><strong><code>MAC-SORT</code> (Ours)</strong></td>
                     <td><strong><code>CS-OD</code> (Ours)</strong></td>
                     <td>✔</td>
@@ -699,7 +661,7 @@
                     <td>84.82</td>
                     <td>48.89</td>
                 </tr>
-                <tr>
+                <tr class="our-result">
                     <td><strong><code>MAC-SORT</code>(Ours)</strong></td>
                     <td>YOLOX</td>
                     <td>&times;</td>
@@ -707,7 +669,7 @@
                     <td>86.85</td>
                     <td><strong>54.06</strong></td>
                 </tr>
-                <tr>
+                <tr class="our-result">
                     <td><strong><code>MAC-SORT</code>(Ours)</strong></td>
                     <td><strong><code>CS-OD</code> (Ours)</strong></td>
                     <td>✔</td>
@@ -844,7 +806,7 @@
                 </tr>
             </tbody>
         </table>
-        
+        <br>
         </div>
     </div>
     
