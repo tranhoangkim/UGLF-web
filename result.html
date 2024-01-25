@@ -287,7 +287,7 @@
             <div class="n-page video">
                 <p>
                     We conduct extensive experiments to empirically prove the performance of our proposed Open-GMOT
-                    including both detection with CSOD and association with MAC-SORT in the GMOT problem.
+                    including both detection with CS-OD and association with MAC-SORT in the GMOT problem.
                     Our strategy can help bridging the gap between human's intention and computer understanding to provide
                     flexibility in tracking objects with distinctive characteristics follow input texts.
                 </p>
@@ -301,7 +301,7 @@
                         <div class="container">
                             <div class="main-video-container">
                                 <div class="prompt">
-                                    <p style="font-family: 'Courier New', monospace; font-weight: bold; text-align: center;">"Track <span style="color: orange;">red color</span> <span style="font-weight: bold; color: green;">car</span> while exclude
+                                    <p style="font-family: 'Courier New', monospace; font-weight: bold; text-align: center;">"Track <span style="color: orange;">red color</span> <span style="font-weight: bold; color: green;">car</span> while excluding
                                         <span style="font-weight: bold;  color: crimson;">yellow, blue, black, white color</span> <span style="font-weight: bold; color: green;">car</span>"
                                     </p>
                                 </div>
@@ -319,11 +319,11 @@
             </h2>
         
         <p>
-            We present a detailed comparison through seven tables below. The first two tables highlight the distinctions between our innovative <b>Open-GMOT</b> approach and the existing one-shot GMOT on the <b>Refer-GMOT dataset</b>. In the subsequent four tables, we demonstrate the effectiveness and generalization of <b>Open-GMOT</b> by comparing it with other state-of-the-art fully-supervised MOT methods on Refer-Animal, <b>DanceTrack</b> and <b>MOT20 datasets</b>. We also conduct an ablation study on the parameter <b>&theta; (theta)</b>, which measures the similarity between two vectors and plays a crucial role in adeptly balancing between motion and appearance during tracking using <b>MAC-SORT.</b>
+            We present a detailed comparison through six tables below. The first two tables highlight the distinctions between our innovative <b>Open-GMOT</b> approach and the existing one-shot GMOT on the <b><span style=" font-weight: bold; font-family: 'Courier New', Courier, monospace;">Refer-GMOT</span> dataset</b>. In the subsequent four tables, we demonstrate the effectiveness and generalization of <b>Open-GMOT</b> by comparing it with other state-of-the-art fully-supervised MOT methods on <b>Refer-Animal</b>, <b>DanceTrack</b> and <b>MOT20 datasets</b>. We also conduct an ablation study on the parameter <b>&theta; (theta)</b>, which measures the similarity between two vectors and plays a crucial role in adeptly balancing between motion and appearance during tracking using <b>MAC-SORT.</b>
         </p>
 
         <table class="gmot-tracking-comparison">
-            <caption><u>GMOT Tracking comparison</u> on <code>Refer-GMOT40</code> dataset between our <code><strong>CS-OD</strong></code> with existing SOTA OS-OD on with various SOTA trackers.</caption>
+            <caption><u>GMOT Tracking comparison</u> on <code><span style=" font-weight: bold; font-family: 'Courier New', Courier, monospace;">Refer-GMOT</span>40</code> dataset between our <code><strong>CS-OD</strong></code> with existing SOTA OS-OD on with various SOTA trackers.</caption>
             <thead>
                 <tr>
                     <th><strong>Trackers</strong></th>
@@ -436,7 +436,7 @@
         
 
         <table class="gmot-tracking-comparison">
-            <caption><u>GMOT Tracking comparison</u> on <code>Refer-GMOT40</code> dataset between our <strong><code>MAC-SORT</code></strong> with various SOTA trackers.</caption>
+            <caption><u>GMOT Tracking comparison</u> on <code><span style=" font-weight: bold; font-family: 'Courier New', Courier, monospace;">Refer-GMOT</span>40</code> dataset between our <strong><code>MAC-SORT</code></strong> with various SOTA trackers.</caption>
             <thead>
                 <tr>
                     <th><strong>Trackers</strong></th>
@@ -761,7 +761,7 @@
         </table>
         
         <table class="ablation-study-theta">
-            <caption><u>Ablation study of &theta;</u> in computing <code>W<sub>amw</sub></code> on <code>Refer-GMOT40</code> dataset.</caption>
+            <caption><u>Ablation study of &theta;</u> in computing <code>W<sub>amw</sub></code> on <code><span style=" font-weight: bold; font-family: 'Courier New', Courier, monospace;">Refer-GMOT</span>40</code> dataset.</caption>
             <thead>
                 <tr>
                     <th rowspan="2">&theta;</th>

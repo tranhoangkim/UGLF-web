@@ -267,16 +267,16 @@
                 <tr class="babyblue50">
                     <td>Refer-KITTI~[14]</td>
                     <td class="checkmark">✔</td>
-                    <td>-</td>
+                    <td>2</td>
                     <td>18</td>
-                    <td>6.65K</td>
-                    <td>-</td>
-                    <td>-</td>
+                    <td>637</td>
+                    <td>28.72K</td>
+                    <td>356K</td>
                 </tr>
                 <!-- GMOT Section -->
                 <tr class="aureolin20">
                     <td rowspan="4">GMOT</td>
-                    <td>AnimalTrack~[14]</td>
+                    <td>AnimalTrack~[15]</td>
                     <td class="xmark">✖</td>
                     <td>10</td>
                     <td>58</td>
@@ -285,7 +285,7 @@
                     <td>429K</td>
                 </tr>
                 <tr class="aureolin20">
-                    <td>GMOT-40~[15]</td>
+                    <td>GMOT-40~[16]</td>
                     <td class="xmark">✖</td>
                     <td>10</td>
                     <td>40</td>
@@ -323,8 +323,8 @@
                 <li><strong>class_name:</strong> The general category of objects being tracked.</li>
                 <li><strong>class_synonyms:</strong> Other names or terms for the class.</li>
                 <li><strong>definition:</strong> A description of the objects being tracked.</li>
-                <li><strong>include Attributes:</strong> Characteristics of the tracked objects based on what can be seen.</li>
-                <li><strong>exclude Attributes:</strong> Characteristics that identify objects within the same category that are not being tracked.</li>
+                <li><strong>include_attributes:</strong> Characteristics of the tracked objects based on what can be seen.</li>
+                <li><strong>exclude_attributes:</strong> Characteristics that identify objects within the same category that are not being tracked.</li>
                 <li><strong>caption:</strong> Descriptions of the objects being tracked. For tracking all objects in a class, the caption is in the format: "Track [visible attributes] [class name]". When tracking a specific subset, the format is: "Track [visible attributes] [class name] while excluding [untracked attributes] [class name]".</li>
                 <li><strong>track_path:</strong> The exact tracking path is stored separately, following the standard format for multiple object tracking challenges.</li>
                 <p style="font-weight: bold; font-style: italic;">For track label:</p>
@@ -360,15 +360,15 @@
     
                     <pre class="pre-container">
 <b>Track label for associating objects' IDs through time</b>
-1, 1, xl, yl, xr, yr, 1, 1, 1
-1, 2, xl, yl, xr, yr, 1, 1, 1
-1, 3, xl, yl, xr, yr, 1, 1, 1
-2, 1, xl, yl, xr, yr, 1, 1, 1
-2, 2, xl, yl, xr, yr, 1, 1, 1
-2, 3, xl, yl, xr, yr, 1, 1, 1
-3, 1, xl, yl, xr, yr, 1, 1, 1
-3, 2, xl, yl, xr, yr, 1, 1, 1
-3, 3, xl, yl, xr, yr, 1, 1, 1
+1, 1, xl, yt, w, h, 1, 1, 1
+1, 2, xl, yt, w, h, 1, 1, 1
+1, 3, xl, yt, w, h, 1, 1, 1
+2, 1, xl, yt, w, h, 1, 1, 1
+2, 2, xl, yt, w, h, 1, 1, 1
+2, 3, xl, yt, w, h, 1, 1, 1
+3, 1, xl, yt, w, h, 1, 1, 1
+3, 2, xl, yt, w, h, 1, 1, 1
+3, 3, xl, yt, w, h, 1, 1, 1
                         </pre>
                </div>
         </div>

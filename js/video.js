@@ -3,7 +3,7 @@ const videosList = [
         video: 'https://www.youtube.com/embed/MX8g-8NXx7w',
         thumbnail: 'https://img.youtube.com/vi/MX8g-8NXx7w/maxresdefault.jpg',
         title: 'Red cars',
-        prompt: `<p style="font-family: 'Courier New', monospace; font-weight: bold; text-align: center;">"Track <span style="color: orange;">red color</span> <span style="font-weight: bold; color: green;">car</span> while exclude
+        prompt: `<p style="font-family: 'Courier New', monospace; font-weight: bold; text-align: center;">"Track <span style="color: orange;">red color</span> <span style="font-weight: bold; color: green;">car</span> while excluding
         <span style="font-weight: bold;  color: crimson;">yellow, blue, black, white color</span> <span style="font-weight: bold; color: green;">car</span>"
         </p>`
     },
@@ -11,7 +11,7 @@ const videosList = [
         video: 'https://www.youtube.com/embed/H7nVN4VRhbk',
         thumbnail: 'https://img.youtube.com/vi/H7nVN4VRhbk/maxresdefault.jpg',
         title: 'Yellow cars',
-        prompt: `<p style="font-family: 'Courier New', monospace; font-weight: bold; text-align: center;">"Track <span style="color: orange;">yellow color</span> <span style="font-weight: bold; color: green;">car</span> while exclude
+        prompt: `<p style="font-family: 'Courier New', monospace; font-weight: bold; text-align: center;">"Track <span style="color: orange;">yellow color</span> <span style="font-weight: bold; color: green;">car</span> while excluding
         <span style="font-weight: bold;  color: crimson;">red, blue, black, white color</span> <span style="font-weight: bold; color: green;">car</span>"
         </p>`
     },
@@ -19,7 +19,7 @@ const videosList = [
         video: 'https://www.youtube.com/embed/E7mSlziENQ4',
         thumbnail: 'https://img.youtube.com/vi/E7mSlziENQ4/maxresdefault.jpg',
         title: 'Dark blue cars',
-        prompt: `<p style="font-family: 'Courier New', monospace; font-weight: bold; text-align: center;">"Track <span style="color: orange;">dark blue color</span> <span style="font-weight: bold; color: green;">car</span> while exclude
+        prompt: `<p style="font-family: 'Courier New', monospace; font-weight: bold; text-align: center;">"Track <span style="color: orange;">dark blue color</span> <span style="font-weight: bold; color: green;">car</span> while excluding
         <span style="font-weight: bold;  color: crimson;">red, yellow, black, white color</span> <span style="font-weight: bold; color: green;">car</span>"
         </p>`
     },
