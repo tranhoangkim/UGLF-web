@@ -310,13 +310,13 @@
             <p>Each video in these datasets has been carefully annotated with several details:</p>
             <ul>
                 <p style="font-weight: bold; font-style: italic;">For text label:</p> 
-                <li><strong>Class Name:</strong> The general category of objects being tracked.</li>
-                <li><strong>Class Synonyms:</strong> Other names or terms for the class.</li>
-                <li><strong>Definition:</strong> A description of the objects being tracked.</li>
-                <li><strong>Include Attributes:</strong> Characteristics of the tracked objects based on what can be seen.</li>
-                <li><strong>Exclude Attributes:</strong> Characteristics that identify objects within the same category that are not being tracked.</li>
-                <li><strong>Caption:</strong> Descriptions of the objects being tracked. For tracking all objects in a class, the caption is in the format: "Track [visible attributes] [class name]". When tracking a specific subset, the format is: "Track [visible attributes] [class name] while excluding [untracked attributes] [class name]".</li>
-                <li><strong>Track Path:</strong> The exact tracking path is stored separately, following the standard format for multiple object tracking challenges.</li>
+                <li><strong>class_name:</strong> The general category of objects being tracked.</li>
+                <li><strong>class_ynonyms:</strong> Other names or terms for the class.</li>
+                <li><strong>definition:</strong> A description of the objects being tracked.</li>
+                <li><strong>include Attributes:</strong> Characteristics of the tracked objects based on what can be seen.</li>
+                <li><strong>exclude Attributes:</strong> Characteristics that identify objects within the same category that are not being tracked.</li>
+                <li><strong>caption:</strong> Descriptions of the objects being tracked. For tracking all objects in a class, the caption is in the format: "Track [visible attributes] [class name]". When tracking a specific subset, the format is: "Track [visible attributes] [class name] while excluding [untracked attributes] [class name]".</li>
+                <li><strong>track_path:</strong> The exact tracking path is stored separately, following the standard format for multiple object tracking challenges.</li>
                 <p style="font-weight: bold; font-style: italic;">For track label:</p>
                 <p>each line will contain 9 elements, seperated by commas</p>
                 <p style="color: red;">&lt;frame&gt;, &lt;id&gt;, &lt;bb_left&gt;, &lt;bb_top&gt;, &lt;bb_width&gt;, &lt;bb_height&gt;, &lt;conf&gt;, &lt;x&gt;, &lt;y&gt;, &lt;z&gt;</p>
@@ -335,16 +335,16 @@
                 <pre class="pre-container" style="border-right: 1px solid #ffffff;">
 <b>Text label for referring with specific attributes</b>
 {
-    "video": "",
-    "label":[{
-        "class_name": "",
-        "class_synonyms":[],
+    video: "",
+    label:{
+        class_name: "",
+        class_synonyms:[],
         definition: "",
         include_attributes: []
         exclude_attributes: []
         caption: "",
         track_path: "",
-    }]
+    }
 }
                     </pre>
     
@@ -366,32 +366,32 @@
         <div class="image-json-container">
             <img src="media/dataset-airplane.jpg" alt="Image 1" class="image-dataset">
             <pre class="json-dataset">
-                <b>"video":</b> "airplane-1",
-                <b>"label":</b>[ {
-                    &nbsp;&nbsp;&nbsp;&nbsp;<b>"class_name":</b> "helicopter",
-                    &nbsp;&nbsp;&nbsp;&nbsp;<b>"class_synonyms":</b>["airplane", "aircraft", "jet", "plane"],
-                    &nbsp;&nbsp;&nbsp;&nbsp;<b>"definition":</b> "a vehicle designed for flight in the air",
-                    &nbsp;&nbsp;&nbsp;&nbsp;<b>"include_attributes":</b> ["black", "flying"],
-                    &nbsp;&nbsp;&nbsp;&nbsp;<b>"exclude_attributes":</b> [],
-                    &nbsp;&nbsp;&nbsp;&nbsp;<b>"caption":</b> "Track all black flying helicopters"],
-                    &nbsp;&nbsp;&nbsp;&nbsp;<b>"track_path":</b> airplane_01.text
-                } ]
+                <b>video:</b> "airplane-1",
+                <b>label:</b>{
+                    &nbsp;&nbsp;&nbsp;&nbsp;<b>class_name:</b> "helicopter",
+                    &nbsp;&nbsp;&nbsp;&nbsp;<b>class_synonyms:</b>["airplane", "aircraft", "jet", "plane"],
+                    &nbsp;&nbsp;&nbsp;&nbsp;<b>definition:</b> "a vehicle designed for flight in the air",
+                    &nbsp;&nbsp;&nbsp;&nbsp;<b>include_attributes:</b> ["black", "flying"],
+                    &nbsp;&nbsp;&nbsp;&nbsp;<b>exclude_attributes:</b> [],
+                    &nbsp;&nbsp;&nbsp;&nbsp;<b>caption:</b> "Track all black flying helicopters"],
+                    &nbsp;&nbsp;&nbsp;&nbsp;<b>track_path:</b> airplane_01.text
+                }
             </pre>
           </div>
 
           <div class="image-json-container">
             <img src="media/dataset-car.jpg" alt="Image 1" class="image-dataset">
             <pre class="json-dataset">
-              <b>"video":</b> car-1
-              <b>"label":</b> [{
-                  &nbsp;&nbsp;&nbsp;&nbsp;<b>"class_name":</b> "car",
-                  &nbsp;&nbsp;&nbsp;&nbsp;<b>"class_synonyms":</b> ["vehicle", "automobile", "auto", "transport", "transportation"],
-                  &nbsp;&nbsp;&nbsp;&nbsp;<b>"definition":</b> "mechanical device designed for transportation, powered by an engine or motor, equipped by four wheels",
-                  &nbsp;&nbsp;&nbsp;&nbsp;<b>"include_attributes": </b> ["white headlight", "oncoming traffic"],
-                  &nbsp;&nbsp;&nbsp;&nbsp;<b>"exclude_attributes": </b> [red taillight, opposite traffic],
-                  &nbsp;&nbsp;&nbsp;&nbsp;<b>"caption": </b> "Track white headlight cars while excluding red taillight cars",
-                  &nbsp;&nbsp;&nbsp;&nbsp;<b>"track_path":</b> "car_01.txt",
-              } ]
+              <b>video:</b> car-1
+              <b>label:</b>{
+                  &nbsp;&nbsp;&nbsp;&nbsp;<b>class_name:</b> "car",
+                  &nbsp;&nbsp;&nbsp;&nbsp;<b>class_synonyms:</b> ["vehicle", "automobile", "auto", "transport", "transportation"],
+                  &nbsp;&nbsp;&nbsp;&nbsp;<b>definition:</b> "mechanical device designed for transportation, powered by an engine or motor, equipped by four wheels",
+                  &nbsp;&nbsp;&nbsp;&nbsp;<b>include_attributes: </b> ["white headlight", "oncoming traffic"],
+                  &nbsp;&nbsp;&nbsp;&nbsp;<b>exclude_attributes: </b> [red taillight, opposite traffic],
+                  &nbsp;&nbsp;&nbsp;&nbsp;<b>caption: </b> "Track white headlight cars while excluding red taillight cars",
+                  &nbsp;&nbsp;&nbsp;&nbsp;<b>track_path:</b> "car_01.txt",
+              }
             </pre>
           </div>
         </p>
